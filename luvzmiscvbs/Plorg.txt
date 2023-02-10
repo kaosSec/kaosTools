@@ -1,0 +1,468 @@
+1 / 60
+https://www.virustotal.com/gui/file/d2ce8e185b7bea4b062b8e35d2debb6558efc1e1dae6b392bd6d269ac14ab394?nocache=1
+
+
+
+
+1
+/ 60
+Community Score
+1 security vendor and no sandboxes flagged this file as malicious
+d2ce8e185b7bea4b062b8e35d2debb6558efc1e1dae6b392bd6d269ac14ab394
+Plorg.vbs
+17.17 KB
+Size
+2023-02-10 19:10:37 UTC2 hours ago
+vba open-file enum-windows exe-pattern copy-file run-file write-file create-ole direct-cpu-clock-access sets-process-name detect-debug-environment checks-cpu-name
+DETECTION
+DETAILS
+RELATIONS
+BEHAVIOR
+COMMUNITY
+Join the VT Community and enjoy additional community insights and crowdsourced detections.
+Security vendors' analysis
+Do you want to automate checks?
+Kaspersky
+
+
+HEUR:Worm.Script.Generic
+Acronis (Static ML)
+
+Undetected
+AhnLab-V3
+
+Undetected
+ALYac
+
+Undetected
+Antiy-AVL
+
+Undetected
+Arcabit
+
+Undetected
+Avast
+
+Undetected
+AVG
+
+Undetected
+Avira (no cloud)
+
+Undetected
+Baidu
+
+Undetected
+BitDefender
+
+Undetected
+BitDefenderTheta
+
+Undetected
+Bkav Pro
+
+Undetected
+ClamAV
+
+Undetected
+CMC
+
+Undetected
+Cynet
+
+Undetected
+Cyren
+
+Undetected
+DrWeb
+
+Undetected
+Emsisoft
+
+Undetected
+eScan
+
+Undetected
+ESET-NOD32
+
+Undetected
+F-Secure
+
+Undetected
+Fortinet
+
+Undetected
+GData
+
+Undetected
+Google
+
+Undetected
+Gridinsoft (no cloud)
+
+Undetected
+Ikarus
+
+Undetected
+Jiangmin
+
+Undetected
+K7AntiVirus
+
+Undetected
+K7GW
+
+Undetected
+Kingsoft
+
+Undetected
+Lionic
+
+Undetected
+Malwarebytes
+
+Undetected
+MAX
+
+Undetected
+MaxSecure
+
+Undetected
+McAfee
+
+Undetected
+McAfee-GW-Edition
+
+Undetected
+Microsoft
+
+Undetected
+NANO-Antivirus
+
+Undetected
+Panda
+
+Undetected
+QuickHeal
+
+Undetected
+Rising
+
+Undetected
+Sangfor Engine Zero
+
+Undetected
+Sophos
+
+Undetected
+SUPERAntiSpyware
+
+Undetected
+Symantec
+
+Undetected
+TACHYON
+
+Undetected
+Tencent
+
+Undetected
+Trellix (FireEye)
+
+Undetected
+TrendMicro
+
+Undetected
+TrendMicro-HouseCall
+
+Undetected
+VBA32
+
+Undetected
+VIPRE
+
+Undetected
+VirIT
+
+Undetected
+ViRobot
+
+Undetected
+Xcitium
+
+Undetected
+Yandex
+
+Undetected
+Zillya
+
+Undetected
+ZoneAlarm by Check Point
+
+Undetected
+Zoner
+
+Undetected
+Alibaba
+
+Unable to process file type
+Avast-Mobile
+
+Unable to process file type
+BitDefenderFalx
+
+Unable to process file type
+CrowdStrike Falcon
+
+Unable to process file type
+Cybereason
+
+Unable to process file type
+Cylance
+
+Unable to process file type
+Elastic
+
+Unable to process file type
+Palo Alto Networks
+
+Unable to process file type
+SecureAge
+
+Unable to process file type
+SentinelOne (Static ML)
+
+Unable to process file type
+Symantec Mobile Insight
+
+Unable to process file type
+TEHTRIS
+
+Unable to process file type
+Trapmine
+
+Unable to process file type
+Trustlook
+
+Unable to process file type
+
+
+
+
+Dropped Files
+(34)
+Scanned
+Detections
+File type
+Name
+2023-02-05
+0
+/ 60
+XML
+Paths.xcu
+file
+01bec2d0de68cff0b9e23b8afb9e76cb80b06bbabad3c7a0f85083411f90fb7a
+file
+0271d0318b857753b783fcd951ba1d1df978a6164ca526786ff335f016c01aa6
+file
+17ea039f043b33f34c23cd65d5fa3cd6a35fe72a48c168cf906856318e45b006
+file
+2257c69e97e23acacaae7e9738fb36b43ec4a1bb15a212e092dd878648f1a45c
+file
+2729e1636efc64f95d75e649ebd11ee321693acf2dcc700971677dbf84a3db5d
+file
+278d6656a1686c605c91bfbbfd36f2e7996f02ff31b20855b5c8057c99ae6142
+file
+2f59cad31951e5007900fc58f8ae0bc727aa5c70991863f286ce94406a929007
+file
+31ef0518ca928c7537604dcd4adf3d80d837fad9b36e13c1761411cc965838d9
+file
+48b0e3c52e60198c2f0c120fc61b35d7dc566abf4d458de81561b9bf68639ab7
+file
+51fad368b654cd4a80d34f2ea74062c8278c5db86de0cc4996aa4ac4deef2adb
+2023-02-05
+0
+/ 60
+XML
+dialog.xlc
+file
+645d01577985d5764ad8fe852bb7d93304c05e3ae7d82c45b41fdb2737058870
+file
+648d6977a365a8cd476b042dd5f12d25831a9fe761ff928d45ad6f86dbf7755e
+file
+6baa234486864da7b3f7f21bfa38b89be2defa84b7d775c80b8fd3e53f1e3b0a
+file
+6cc094244d3801c3c6860355f33e54e7728b2a8eaa7523971e8727542971ed19
+2022-11-17
+0
+/ 61
+XML
+script.xlb
+2022-11-17
+0
+/ 61
+XML
+backenddb.xml
+2023-01-05
+0
+/ 61
+XML
+dialog.xlb
+file
+99427c8dc15e96d35241561bc335fdbfbcbaaad934dec0a502d2bde6ef111476
+file
+9dac0da6ae58f40dcfdb38f9815f44de14d237cb34155428801356d6f7950017
+2023-01-05
+0
+/ 60
+XML
+backenddb.xml
+file
+ad85402a08064f47bc5bfcbfe749b34649256581dd1bca40a6fec592a655ea7e
+file
+aee65b198c5d4d872bc6e280497544b603881cb31fcecc01196c9593b192082b
+file
+b0ec0c65dce83cefc02e3fa74596ae6005d8ad8205df27d95d6810b42b2c28c5
+file
+b285ba067dde9033b885da866a8d482fabe387e12b35e14a8b39ca043b227bdb
+2023-01-29
+0
+/ 60
+XML
+Module1.xba
+file
+b67214f2ea8c4d0ea30b8f9003080021a102846c604229a21700c1322317e92c
+file
+d87c5f3cdfb5b7c0510e4093a2f64c14c759faf83216a902a527c51ffa1ade9e
+file
+e1acb20dba6f82cb6b349a535360a790525025e4a4247f1a8599785b7e36d0a5
+file
+e41424ef272bdbd07e60aa0069817cd1b3d51ac8565f2cfcbb80bd5f30c550a5
+file
+ed63892d07220d8554cbb8dc8d2817f868f5b74c5b91c9734317fdff6a0ed99d
+file
+f0386d4349b73788c79fc9a3b73bfcf24416c971d20e81611d94e2b9408daa7e
+file
+f107f767255759343427cf907cc1e40d521f542281449789fa8149652671d9b8
+
+
+
+
+Display grouped sandbox reports
+
+VirusTotal Jujubox
+0
+0
+0
+0
+0
+0
+
+VirusTotal Observer
+0
+0
+0
+0
+0
+0
+
+Zenbox
+0
+3
+0
+0
+0
+0
+
+Zenbox Linux
+0
+3
+0
+0
+41
+0
+Activity Summary
+Detections
+NOT FOUND
+Mitre Signatures
+15 INFO
+IDS Rules
+NOT FOUND
+Sigma Rules
+NOT FOUND
+Dropped Files
+1 TEXT 1 XML
+Network comms
+NOT FOUND
+Behavior Tags
+checks-cpu-name detect-debug-environment direct-cpu-clock-access sets-process-name
+Mitre ATT&CK Tactics and Techniques
+Execution TA0002
+Scripting T1064
+Executes batch files
+Execution TA0002
+Command and Scripting Interpreter T1059
+Executes the "sed" command used to modify input streams (typically from files or pipes)
+Scripting T1064
+Executes commands using a shell command-line interpreter
+Defense Evasion TA0005
+Scripting T1064
+Executes batch files
+Defense Evasion TA0005
+Scripting T1064
+Executes commands using a shell command-line interpreter
+File and Directory Permissions Modification T1222
+Sample tries to set the executable flag
+Hidden Files and Directories T1564.001
+Creates hidden files, links and/or directories
+Discovery TA0007
+System Information Discovery T1082
+Reads software policies
+File and Directory Discovery T1083
+Reads ini files
+Security Software Discovery T1518.001
+May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)
+Discovery TA0007
+System Information Discovery T1082
+Reads CPU information from /sys indicative of miner or evasive malware
+Reads system information from the proc file system
+Executes the "uname" command used to read OS and architecture name
+Reads CPU information from /proc indicative of miner or evasive malware
+Security Software Discovery T1518.001
+Uses the "uname" system call to query kernel version information (possible evasion)
+File system actions
+Files Dropped
+/proc/3915/coredump_filter
+/proc/3971/coredump_filter
+/root/.config/libreoffice/4/.lock
+/root/.config/libreoffice/4/user/D2AgD5
+/root/.config/libreoffice/4/user/Dd0QK0
+/root/.config/libreoffice/4/user/LMdXyT
+/root/.config/libreoffice/4/user/RtqE8V
+/root/.config/libreoffice/4/user/basic/Standard/Module1.xba
+/root/.config/libreoffice/4/user/basic/Standard/dialog.xlb
+/root/.config/libreoffice/4/user/basic/Standard/script.xlb
+Registry actions
+Registry Keys Set
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\DefaultFormat
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\FrameRect
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\Maximized
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\PageMargin
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\PrintPageNum
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\ShowRuler
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\ShowStatusBar
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Options\Units
+Process and service actions
+Processes Tree
+ 1088 - C:\Windows\System32\write.exe write (" .To = objContact.Email1Address")
+ 1376 - C:\Windows\System32\write.exe write ("For Each objContact In objContacts")
+ 2044 - "C:\Program Files\windows nt\accessories\wordpad.exe" ("For Each objContact In objContacts")
+ 2388 - C:\Windows\System32\write.exe write (" Set objMail = Nothing")
+ 268 - "C:\Program Files\windows nt\accessories\wordpad.exe" (" If objContact.Class = 43 Then")
+ 3344 - C:\Windows\System32\write.exe write ("Set objOutlook = CreateObject("Outlook.Application")")
+ 3780 - "C:\Program Files\windows nt\accessories\wordpad.exe" (" With objMail")
+3892 - /usr/bin/exo-open exo-open /tmp/run.bat
+ 3896 - /usr/bin/dbus-launch dbus-launch --autolaunch=a39eb3ed78b7401fb6809ed0c562a5b1 --binary-syntax --close-stderr
+ 3898 - /usr/bin/exo-open n/a
