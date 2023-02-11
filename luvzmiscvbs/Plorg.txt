@@ -22,10 +22,11 @@ COMMUNITY
 Join the VT Community and enjoy additional community insights and crowdsourced detections.
 Security vendors' analysis
 Do you want to automate checks?
+
 Kaspersky
 
-
 HEUR:Worm.Script.Generic
+
 Acronis (Static ML)
 
 Undetected
