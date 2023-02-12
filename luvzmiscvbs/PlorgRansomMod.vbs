@@ -1,5 +1,8 @@
 System.Threading.Thread.Sleep(777777)
 
+Set shell = CreateObject("WScript.Shell")
+shell.Run("pip install cryptography")
+
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set file = fso.CreateTextFile("e748.html")
 Set w = file.WriteLine
