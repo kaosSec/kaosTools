@@ -190,11 +190,13 @@ while True:
 
     elif x1 == "pingo":
         print("boing")
+        m13 = input("REQUESTS: ")
+        l56 = input("CONNECTIONS: ")
         j342 = input("HOSTNAME: ")
         m32 = input("HOSPORT: ")
         try:
             output = subprocess.check_output(['ruby', '--version'], stderr=subprocess.STDOUT)
-            p = subprocess.Popen(['ruby', 'pingo.rb', '-h', j342, '-p', m32], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            p = subprocess.Popen(['ruby', 'pingo.rb', '-n' , m13, '-c', l56, '-h', j342, '-p', m32], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             o4 = p.stdout.read()
             print(o4)
             v3 = p.stderr.read()

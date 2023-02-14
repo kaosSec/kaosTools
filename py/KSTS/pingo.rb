@@ -6,6 +6,15 @@ options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: search.rb [options]"
 
+  opts.on()
+  opts.on("-n", "--number NUMBERREQUESTS", "Input requests") do |number|
+    options[:requests] = number
+  end
+
+  opts.on("-c", "--connections CONNECTIONSAMOUNT", "Input connections") do |connections|
+    options[:connections] = connections
+  end
+
   opts.on("-h", "--host HOSTNAME", "Input host") do |hostname|
     options[:hostname] = hostname
   end
@@ -15,6 +24,6 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-while true:
-  system("ab -n 1000 -c 10 " + options[:hostname] + ":" + options[:port])
+while true do
+  system("ab " + options[:number] + options[:connections] + options[:hostname] + ":" + options[:port])
 end
