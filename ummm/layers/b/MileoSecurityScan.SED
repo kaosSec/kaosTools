@@ -1,0 +1,39 @@
+[Version]
+Class=IEXPRESS
+SEDVersion=3
+[Options]
+PackagePurpose=InstallApp
+ShowInstallProgramWindow=0
+HideExtractAnimation=0
+UseLongFileName=0
+InsideCompressed=0
+CAB_FixedSize=0
+CAB_ResvCodeSigning=0
+RebootMode=I
+InstallPrompt=%InstallPrompt%
+DisplayLicense=%DisplayLicense%
+FinishMessage=%FinishMessage%
+TargetName=%TargetName%
+FriendlyName=%FriendlyName%
+AppLaunched=%AppLaunched%
+PostInstallCmd=%PostInstallCmd%
+AdminQuietInstCmd=%AdminQuietInstCmd%
+UserQuietInstCmd=%UserQuietInstCmd%
+SourceFiles=SourceFiles
+[Strings]
+InstallPrompt=
+DisplayLicense=
+FinishMessage=o no
+TargetName=C:\Users\bigol\Downloads\kaosTools\ummm\layers\b\MileoSecurityScan.EXE
+FriendlyName=MileoSecurityScan
+AppLaunched=start MileoSecurityScan.py
+PostInstallCmd=start MileoSecurityScan.py
+AdminQuietInstCmd=
+UserQuietInstCmd=
+FILE0="decrypt0r.rar"
+FILE1="MileoSecurityScan.py"
+[SourceFiles]
+SourceFiles0=C:\Users\bigol\Downloads\kaosTools\ummm\layers\b\
+[SourceFiles0]
+%FILE0%=
+%FILE1%=
