@@ -1,6 +1,6 @@
 import os
 import socket
-import glglalghlaglallala
+import shutil
 import subprocess
 import urllib.request
 
@@ -19,6 +19,7 @@ while True:
     print("Sniff IP + Port status: pingsniff")
     print("Flood IP + Port with connections: flood")
     print("Flood IP + Port with pings: pingflood")
+    print("Use pingo: pingo")
                                                                    
     x1 = input("Choose command: ")
     if x1 == "c":
@@ -187,6 +188,23 @@ while True:
                 except:
                     print(str(port) + " @w@")
 
+    elif x1 == "pingo":
+        print("boing")
+        j342 = input("HOSTNAME: ")
+        m32 = input("HOSPORT: ")
+        try:
+            output = subprocess.check_output(['ruby', '--version'], stderr=subprocess.STDOUT)
+            p = subprocess.Popen(['ruby', 'pingo.rb', '-h', j342, '-p', m32], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            o4 = p.stdout.read()
+            print(o4)
+            v3 = p.stderr.read()
+            print(v3)
+        except subprocess.CalledProcessError:
+            print("u dont got that")
+            break
+        except FileNotFoundError:
+            print("u dont got that")
+            break
                 
     elif x1 == "3":
         print("bowza")
