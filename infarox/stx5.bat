@@ -1,4 +1,4 @@
 @echo off
-start isc.py
+start isc.vbs
 start yani.ps1
 exit
