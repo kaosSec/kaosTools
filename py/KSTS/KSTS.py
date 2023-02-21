@@ -6,7 +6,7 @@ import platform
 import random
 import string
 from bs4 import BeautifulSoup
-import gllaglalglalgalglalglalga
+import shutil
 import subprocess
 import urllib.request
 import smtplib
