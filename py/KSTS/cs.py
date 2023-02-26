@@ -39,9 +39,11 @@ while True:
     t = threading.Thread(target=handle_client, args=(client_socket,))
     t.start()
     print(data)
-    print(client)
+    print(c)
+    print(clients)
     print("+")
  except:
     print(data)
-    print(client)
+    print(c)
+    print(clients)
     print("-")
