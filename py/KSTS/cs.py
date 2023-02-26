@@ -65,7 +65,6 @@ while True:
     print(f"???? wtf {e}")
     sock.close()
     sys.exit()
- except:
     print(data)
     print(c)
     print(clients)
