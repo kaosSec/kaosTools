@@ -51,6 +51,20 @@ while True:
     print(c)
     print(clients)
     print("+")
+ except socket.error as e:
+    print(f"@w@ {e}")
+ except KeyboardInterrupt:
+    print("bai :3")
+    sock.close()
+    sys.exit()
+ except OSError as e:
+    print(f"@w@ {e}")
+    sock.close()
+    sys.exit()
+ except Exception as e:
+    print(f"???? wtf {e}")
+    sock.close()
+    sys.exit()
  except:
     print(data)
     print(c)
