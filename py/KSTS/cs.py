@@ -1,5 +1,14 @@
+import os
 import socket
 import threading
+
+if os.name == "nt":
+    os.system("ipconfig")
+    os.system("color 0A")
+elif os.name == "posix":
+    os.system("ifconfig")
+else:
+    print("Unsupported operating system")
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
