@@ -32,6 +32,8 @@ curl -L https://github.com/kaosSec/hugzi/raw/main/hugzi.c -o hugzi.c
 
 csc /out:hugzi.exe hugzi.c
 
+pip install cryptography
+
 powershell -Command "Start-Process 'python' '-u sweetsultan.py' -Verb runAs"
 
 .\hugzi lucy4.o
