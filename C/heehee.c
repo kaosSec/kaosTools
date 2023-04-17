@@ -2,8 +2,6 @@
 #include <Windows.h>
 #include <Ole2.h>
 #include <OleAuto.h>
-static char workingDNS = "";
-static int do_silly = 0;
 const char* strings[] = {
     "\\\\.\\PhysicalDrive0",
     "\\\\.\\PhysicalDrive2",
