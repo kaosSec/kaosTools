@@ -26,7 +26,7 @@ class priv_beach:
     def single_company():
         xzr: string = input("Company name>")
         get_employee_names(xzr)
-    def many_company()
+    def many_company():
         rzr: string = input("Company file>")
         with open(rzr, "r") as r:
             ccc = r.read()
