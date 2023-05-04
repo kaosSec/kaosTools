@@ -72,9 +72,9 @@ class priv_beach:
         return 0
 if __name__ == "__main__":
     welco: string = "Employee names: employee names"
-                    "Employee names from a list for multiple companies: employee names++"
+                    "Employee names from a file for multiple companies: employee names++"
                     "Single employee's phone number: single number"
-                    "List of employee phone numbers: number list"
+                    "File of employee phone numbers: number list"
     print(welco)
     while true:
         choco = input(">")
