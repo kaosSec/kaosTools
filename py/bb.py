@@ -1,7 +1,14 @@
 import mechanicalsoup
 browser = mechanicalsoup.Browser()
 class priv_beach:
-    def get_employee_names(company_name):
+    def request(url: str):
+        response = requests.get(url)
+        data = response.json()
+        print(data)
+    def cmd(self):
+        zz = input("url>")
+        self.request(zz)
+    def get_employee_names(company_name: str):
         linkedin_url = f"https://www.linkedin.com/search/results/people/?keywords={company_name}&origin=FACETED_SEARCH"
         indeed_url = f"https://www.indeed.com/find-jobs.jsp?prevUrl=https%3A%2F%2Fwww.indeed.com%2F&from=jasx"
         browser.open(linkedin_url)
@@ -24,15 +31,15 @@ class priv_beach:
         print("\nIndeed Employees:")
         print("\n".join(indeed_employees))
     def single_company():
-        xzr: string = input("Company name>")
+        xzr: str = input("Company name>")
         get_employee_names(xzr)
-    def many_company():
-        rzr: string = input("Company file>")
+    def many_company()
+        rzr: str = input("Company file>")
         with open(rzr, "r") as r:
             ccc = r.read()
         for c in ccc:
             get_employee_names(c)
-    def search_phone_number(name):
+    def search_phone_number(name: str):
         linkedin_url = "https://www.linkedin.com/search/results/people/?keywords=" + name.replace(" ", "%20")
         indeed_url = "https://www.indeed.com/people/" + name.replace(" ", "-")
         phone_numbers = []
@@ -48,7 +55,7 @@ class priv_beach:
                 phone_numbers.append(result["href"][4:])
         return phone_numbers
     def input_single():
-        name: string = input("Full name>")
+        name: str = input("Full name>")
         phone_numbers = search_phone_number(name)
         if len(phone_numbers) == 0:
             print("No phone numbers found for " + name)
@@ -72,9 +79,10 @@ class priv_beach:
         return 0
 if __name__ == "__main__":
     welco: string = "Employee names: employee names"
-                    "Employee names from a file for multiple companies: employee names++"
+                    "Employee names from a list for multiple companies: employee names++"
                     "Single employee's phone number: single number"
-                    "File of employee phone numbers: number list"
+                    "List of employee phone numbers: number list"
+                    "Get .JSON from a website request: json"
     print(welco)
     while true:
         choco = input(">")
@@ -86,3 +94,6 @@ if __name__ == "__main__":
             priv_beach.input_single()
         if choco == "number list":
             priv_beach.input_list()
+        if choco == "json":
+            priv_beach.cmd()
+            
