@@ -78,21 +78,21 @@ class priv_beach:
                     print(phone_number)
         return 0
 if __name__ == "__main__":
-    welco: string = "Employee names: employee names"
-                    "Employee names from a list for multiple companies: employee names++"
-                    "Single employee's phone number: single number"
-                    "List of employee phone numbers: number list"
+    welco: string = "Employee names: names"
+                    "Employee names from a list for multiple companies: names++"
+                    "Single employee's phone number: number"
+                    "List of employee phone numbers: list"
                     "Get .JSON from a website request: json"
     print(welco)
     while true:
         choco = input(">")
-        if choco == "employee names":
+        if choco == "names":
             priv_beach.single_company()
-        if choco == "employee names++":
+        if choco == "names++":
             priv_beach.many_company()
-        if choco == "single number":
+        if choco == "number":
             priv_beach.input_single()
-        if choco == "number list":
+        if choco == "list":
             priv_beach.input_list()
         if choco == "json":
             priv_beach.cmd()
