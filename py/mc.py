@@ -11,7 +11,7 @@ class TITLE:
     j: str = "                            0\n"
     k: str = "                            0\n"
     TITLESCREEN: list = [a, b, c, d, e, f, g, h, i, j, k]
-vulnerable = 0
+textbox_vulnerable = 0
 import socket
 import requests
 import threading
