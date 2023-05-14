@@ -86,36 +86,36 @@ class MassCrawl:
     def sweb(self, query: str):
         flag: int = 0
         if flag == 0:
-        if 'https://' in query:
-            if '.com' in query:
-                flag = 0
-            elif '.org' in query:
-                flag = 0
-            elif '.edu' in query:
-                flag = 0
-            elif '.gg' in query:
-                if 'cash' in query:
+            if 'https://' in query:
+                if '.com' in query:
+                    flag = 0
+                elif '.org' in query:
+                    flag = 0
+                elif '.edu' in query:
+                    flag = 0
+                elif '.gg' in query:
+                    if 'cash' in query:
+                        flag = 1
+                    elif 'robux' in query:
+                        flag = 1
+                    elif 'prize' in query:
+                        flag = 1
+                    elif 'money' in query:
+                        flag = 1
+                    elif 'roux' in query:
+                        flag = 1
+                    else:
+                        flag = 0
+                elif '.xyz' in query:
                     flag = 1
-                elif 'robux' in query:
+                elif '.co' in query:
                     flag = 1
-                elif 'prize' in query:
+                elif '.app' in query:
                     flag = 1
-                elif 'money' in query:
-                    flag = 1
-                elif 'roux' in query:
+                elif '.now' in query:
                     flag = 1
                 else:
-                    flag = 0
-            elif '.xyz' in query:
-                flag = 1
-            elif '.co' in query:
-                flag = 1
-            elif '.app' in query:
-                flag = 1
-            elif '.now' in query:
-                flag = 1
-            else:
-                flag = 1
+                    flag = 1
             if flag == 0:
                 search_url = f"{query}"
         else:
